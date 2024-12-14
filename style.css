@@ -17,6 +17,12 @@ a {
     color: inherit;
 }
 
+/* Main Content */
+main {
+    flex: 1; /* Ensures content stretches to fill the space above the footer */
+    padding: 80px 20px; /* Add spacing for fixed navbar */
+}
+
 /* Header Section */
 header {
     background: linear-gradient(to right, #6a11cb, #2575fc);
@@ -128,18 +134,16 @@ ul a {
     font-weight: bold;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 20px;
     position: fixed;
-    width: 100%;
     bottom: 0;
-    left: 0;
+    width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
 }
 
 footer p {
@@ -156,6 +160,7 @@ footer a {
 footer a:hover {
     color: #e67e22;
 }
+
 
 /* Adjust body content spacing to accommodate fixed footer */
 body {
@@ -218,7 +223,7 @@ body {
 }
 
 .menu-bar ul li a:hover {
-    color: #f39c12;
+    color: #124ef3;
 }
 
 /* Add spacing for fixed menu bar */
