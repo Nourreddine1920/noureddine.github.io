@@ -1,9 +1,14 @@
-// Example: Scroll smoothly to sections
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth Scrolling
+document.querySelectorAll('.menu-bar a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
 });
