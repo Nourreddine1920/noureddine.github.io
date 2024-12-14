@@ -128,17 +128,40 @@ ul a {
     font-weight: bold;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
-    background: #333;
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 footer p {
-    font-size: 0.9rem;
+    margin: 0;
+    font-size: 14px;
 }
+
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e67e22;
+}
+
+/* Adjust body content spacing to accommodate fixed footer */
+body {
+    padding-bottom: 50px; /* Match footer height to prevent overlap */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
