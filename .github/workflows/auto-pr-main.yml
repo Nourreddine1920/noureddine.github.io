@@ -1,0 +1,40 @@
+name: Auto Merge to Main
+
+on:
+  push:
+    branches:
+      - develop  # Trigger the workflow when changes are pushed to the 'develop' branch
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-and-merge-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Create a pull request from develop to main
+      - name: Create Pull Request
+        id: create_pr
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Auto-merge changes from develop to main"
+          branch: develop
+          base: main
+          title: "Auto PR: Sync develop to main"
+          body: "This pull request was automatically created to merge changes from `develop` to `main`."
+
+      # Merge the pull request
+      - name: Merge Pull Request
+        if: ${{ steps.create_pr.outputs.pull-request-number }}
+        run: |
+          PR_NUMBER=${{ steps.create_pr.outputs.pull-request-number }}
+          gh pr merge $PR_NUMBER --admin --merge --delete-branch --repo $GITHUB_REPOSITORY
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
