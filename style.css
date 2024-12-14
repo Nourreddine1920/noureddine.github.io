@@ -128,17 +128,40 @@ ul a {
     font-weight: bold;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
-    background: #333;
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 footer p {
-    font-size: 0.9rem;
+    margin: 0;
+    font-size: 14px;
 }
+
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e67e22;
+}
+
+/* Adjust body content spacing to accommodate fixed footer */
+body {
+    padding-bottom: 50px; /* Match footer height to prevent overlap */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -163,3 +186,49 @@ footer p {
         height: 180px;
     }
 }
+
+/* Menu Bar */
+.menu-bar {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu-bar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar ul li {
+    margin: 0 15px;
+}
+
+.menu-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-bar ul li a:hover {
+    color: #f39c12;
+}
+
+/* Add spacing for fixed menu bar */
+body {
+    margin-top: 60px;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
