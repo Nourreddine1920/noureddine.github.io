@@ -217,7 +217,7 @@ body {
 .menu-bar ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
