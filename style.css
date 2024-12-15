@@ -200,6 +200,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
+    text-align: center; /* Ensure text alignment for fallback */
 }
 
 .menu-bar ul {
@@ -226,6 +227,7 @@ body {
 .menu-bar ul li a:hover {
     color: #124ef3;
 }
+
 
 
 /* Add spacing for fixed menu bar */
