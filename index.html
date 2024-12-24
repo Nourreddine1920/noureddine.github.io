@@ -64,7 +64,7 @@
         </div>
             </div>
               
-            <div class="experience-timeline" id="Experience">
+            <div class="experience-timeline" id="Experience" style="display:block;">
                 <h2 class="section-title">Professional Experience</h2>
             
                 <!-- Experience Item -->
@@ -154,7 +154,7 @@
             
             
                 
-                <div class="tab-contents" id="Education">
+                <div class="tab-contents" id="Education" style="display:none;">
                     <ul>
                         
                       
@@ -164,7 +164,7 @@
                         <li ><span>2016-2020</span> <br>High School Abou Kacem Chebbi ,Jammel  </li>
                     </ul>
                 </div>
-                <div class="tab-contents" id="Projects">
+                <div class="tab-contents" id="Projects" style="display:none;">
                     <ul>
                         
                       
@@ -174,7 +174,7 @@
         </div>
     </div>
     </div>
-    <div class="tab-contents" id="Skills">
+    <div class="tab-contents" id="Skills" style="display:none;">
         <ul>
             <section id="skills" class="skills-section">
                 <h2>My Skills</h2>
@@ -845,13 +845,17 @@ color: #1063c1;
             });
     
             // Show the content of the selected tab
-            document.getElementById(tabId).style.display = 'block';
+            const selectedTabContent = document.getElementById(tabId);
+            if (selectedTabContent) {
+                selectedTabContent.style.display = 'block';
+            }
     
             // Add 'active-link' class to the clicked tab
             const activeTab = document.querySelector(`.tab-links[onclick="opentab('${tabId}')"]`);
             activeTab.classList.add('active-link');
         }
     </script>
+    
     
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
