@@ -57,10 +57,10 @@
            <h2 class="mb-4">About Me</h2>
            <p><i>I am a passionate and driven Embedded Software Engineer 🚀 at ACTIA Engineering Services in Ariana, Tunisia. With a deep enthusiasm for technology and embedded systems, I specialize in creating innovative solutions that seamlessly integrate hardware and software to deliver high-performance, reliable systems.</i></p>
            <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('Experience')">Experience</p>
-            <p class="tab-links" onclick="opentab('Education')">Education</p>
-            <p class="tab-links" onclick="opentab('Projects')">Projects</p>
-            <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+            <p class="tab-links active-link" data-tab="Experience" onclick="opentab('Experience')">Experience</p>
+            <p class="tab-links" data-tab="Education" onclick="opentab('Education')">Education</p>
+            <p class="tab-links" data-tab="Projects" onclick="opentab('Projects')">Projects</p>
+            <p class="tab-links" data-tab="Skills" onclick="opentab('Skills')">Skills</p>
             </div>
             </div>
               
@@ -722,198 +722,76 @@ color: #1063c1;
     
 <!-- ---------------------------------------Contact Section -------------------------------------------------- -->
 
-<div class="row d-flex contact-info mb-5" data-aos="fade-up">
     <section class="ftco-section contact-section ftco-no-pb" id="Contact">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
-                <div class="col-md-7 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">Contact</h1>
-                    <h2 class="mb-4">Contact Me</h2>
-                    <p>Below are the details to reach out to me!</p>
+            <div class="col-md-7 heading-section text-center ftco-animate">
+              <h1 class="big big-2">Contact</h1>
+              <h2 class="mb-4">Contact Me</h2>
+              <p>Below are the details to reach out to me!</p>
+            </div>
+          </div>
+  
+          <div class="row d-flex contact-info mb-5">
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-map-signs"></span>
+                    </div>
+                    <h3 class="mb-4">Address</h3>
+                  <p>Ariana ,Tunis, Tunisia</p>
                 </div>
             </div>
-    
-            <div class="row d-flex contact-info mb-5">
-                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-                    <div class="align-self-stretch box p-4 text-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="icon-map-signs"></span>
-                        </div>
-                        <h3 class="mb-4">Address</h3>
-                        <p>Ariana, Tunis, Tunisia</p>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-phone2"></span>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-                    <div class="align-self-stretch box p-4 text-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="icon-phone2"></span>
-                        </div>
-                        <h3 class="mb-4">Contact Number</h3>
-                        <p><a href="tel://0021654615475">+ 216 98 790 520</a></p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-                    <div class="align-self-stretch box p-4 text-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="icon-paper-plane"></span>
-                        </div>
-                        <h3 class="mb-4">Email Address</h3>
-                        <p><a href="mailto:noureddine.awledbrahim@gmail.com">noureddine.awledbrahim@gmail.com</a></p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-                    <div class="align-self-stretch box p-4 text-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="icon-globe"></span>
-                        </div>
-                        <h3 class="mb-4">Download Resume</h3>
-                        <p><a href="IMAGES/noureddine's personal portfolio.pdf" target="_blank">Download Here</a></p>
-                    </div>
+                    <h3 class="mb-4">Contact Number</h3>
+                  <p><a href="tel://0021654615475">+ 216 98 790 520</a></p>
                 </div>
             </div>
-    
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-paper-plane"></span>
+                    </div>
+                    <h3 class="mb-4">Email Address</h3>
+                  <p><a href="noureddine.awledbrahim@gmail.com">noureddine.awledbrahim@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-globe"></span>
+                    </div>
+                    <h3 class="mb-4">Download Resume</h3>
+                  <p><a href="IMAGES/noureddine's personal portfolio.pdf">resumelink</a></p>
+                </div>
+            </div>
+  
             <div class="container">
-                <br>
-                <br>
-                <div class="row justify-content-center">
-                    <div class="col-md-7 ftco-animate text-center">
-                        <h2>Have a <span>Question?</span> <a href="https://docs.google.com/forms/d/1b5LlbnLt10igXy3enq-2sIHE4r60fh_hHVfRLdr-Cxc/edit" class="btn btn-primary">Click Here</a></h2>
-                    </div>
-                </div>
-                <br>
-                <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-                    <li class="ftco-animate normal-txt">Find me on</li>
-                    <li class="ftco-animate"><a href="https://www.linkedin.com/in/nourreddine-awled-brahim/"><span class="icon-linkedin"></span></a></li>
-                    <li class="ftco-animate"><a href="https://wa.me/+21651247082"><span class="icon-whatsapp"></span></a></li>
-                    <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=100009169430223"><span class="icon-facebook"></span></a></li>
-                    <li class="ftco-animate"><a href="https://github.com/Nourreddine1920"><span class="icon-github"></span></a></li>
-                </ul>
-                <br>
-            </div>
-        </div>
-    </section>
-      
-</div>
-
-<style>
-    /* Contact Section Styling */
-.contact-section {
-    background-color: #121212;  /* Dark background to match the page */
-    color: #fff;  /* Light text for readability */
-    padding: 50px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
-}
-
-.contact-section .heading-section h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #F7A800;  /* Golden color for contrast */
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.contact-section .heading-section h2 {
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.contact-section .heading-section p {
-    font-size: 1.1rem;
-    color: #ccc;
-}
-
-.contact-info .box {
-    background-color: #1c1c1c;
-    border-radius: 10px;
-    padding: 30px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.contact-info .box:hover {
-    background-color: #F7A800;
-    color: #fff;
-    transform: translateY(-10px);  /* Lift the box effect */
-}
-
-.contact-info .icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #F7A800;
-}
-
-.contact-info .box h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.contact-info .box p a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.contact-info .box p a:hover {
-    color: #F7A800;
-}
-
-.contact-info .box p a:focus {
-    outline: none;
-    color: #fff;
-}
-
-.contact-section .btn {
-    background-color: #F7A800;
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.contact-section .btn:hover {
-    background-color: #fff;
-    color: #F7A800;
-    transform: translateY(-5px);  /* Slight hover lift effect */
-}
-
-/* Footer Social Links */
-.ftco-footer-social a {
-    font-size: 2rem;
-    margin: 0 15px;
-    color: #F7A800;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.ftco-footer-social a:hover {
-    color: #fff;
-    transform: translateY(-5px);  /* Lift effect on hover */
-}
-
-/* Normal text in footer */
-.ftco-footer-social .normal-txt {
-    font-size: 1rem;
-    color: #fff;
-    margin-right: 10px;
-    align-self: center;
-}
-
-/* Apply AOS animations */
-.ftco-animate {
-    opacity: 0;
-    transition: opacity 0.6s ease-out;
-}
-
-.ftco-animate.visible {
-    opacity: 1;
-}
-
-</style>
+              <br>
+              <br>
+              <div class="row justify-content-center">
+                  <div class="col-md-7 ftco-animate text-center">
+                      
+                      <h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/1b5LlbnLt10igXy3enq-2sIHE4r60fh_hHVfRLdr-Cxc/edit" class="btn ">Click Here</a> </h2>
+                  </div>
+              </div>
+                  <br>
+                      <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+                        <li class="ftco-animate normal-txt">Find me on  </li>
+                        <li class="ftco-animate"><a href="https://www.linkedin.com/in/nourreddine-awled-brahim/"><span class="icon-linkedin"></span></a></li>  
+                        <li class="ftco-animate"><a href="https://wa.me/+21651247082"><span class="icon-whatsapp"></span></a></li>
+                        <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=100009169430223"><span class="icon-facebook"></span></a></li>
+                        <li  class="ftco-animate" ><a href="https://github.com/Nourreddine1920"><span  class="icon-github"></span></a></li>
+                        
+                      </ul>
+                  <br>
+             </div>
+     </div>
+   </section>
   
   
    
@@ -958,23 +836,24 @@ color: #1063c1;
             tabs.forEach(tab => {
                 tab.classList.remove('active-link');
             });
-    
+
             // Hide all tab content
-            const tabContents = document.querySelectorAll('.tab-content');
+            const tabContents = document.querySelectorAll('.tab-contents');
             tabContents.forEach(content => {
                 content.style.display = 'none';
             });
-    
+
             // Show the content of the selected tab
             const selectedTabContent = document.getElementById(tabId);
             if (selectedTabContent) {
                 selectedTabContent.style.display = 'block';
             }
-    
+
             // Add 'active-link' class to the clicked tab
             const activeTab = document.querySelector(`.tab-links[onclick="opentab('${tabId}')"]`);
             activeTab.classList.add('active-link');
         }
+
     </script>
     
     
