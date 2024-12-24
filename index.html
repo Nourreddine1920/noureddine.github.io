@@ -537,7 +537,7 @@ color: #1063c1;
     text-align: center;
     font-size: 36px;
     margin-bottom: 40px;
-    color: #333;
+    color: #FFD700; /* Gold for the section title */
     font-weight: bold;
 }
 
@@ -555,45 +555,46 @@ color: #1063c1;
     top: 0;
     width: 40px;
     height: 40px;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #FFD700; /* Gold icon */
+    color: #000; /* Black for contrast */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     font-size: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(255, 215, 0, 0.3); /* Subtle glow */
 }
 
 .timeline-content {
-    background: #605e5e;
+    background: #222; /* Dark gray for cards */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
     padding: 20px 30px;
     width: 100%;
     transition: transform 0.3s, box-shadow 0.3s;
+    color: #FFF; /* White text for contrast */
 }
 
 .timeline-content:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3); /* Enhanced glow on hover */
 }
 
 .timeline-content h3 {
     font-size: 22px;
-    color: #007BFF;
+    color: #FFD700; /* Gold for job titles */
     margin-bottom: 5px;
 }
 
 .timeline-content h4 {
     font-size: 18px;
-    color: #333;
+    color: #FFF; /* White for company names */
     margin-bottom: 5px;
 }
 
 .timeline-content .date {
     font-size: 14px;
-    color: #666;
+    color: #AAA; /* Light gray for dates */
     margin-bottom: 15px;
 }
 
@@ -605,20 +606,21 @@ color: #1063c1;
 
 .timeline-content ul li {
     font-size: 16px;
-    color: #4a8cca;
+    color: #DDD; /* Slightly lighter gray for list items */
     margin-bottom: 8px;
 }
 
 .timeline-content .technologies {
     font-size: 16px;
     margin-top: 10px;
+    color: #FFF; /* White for technologies label */
 }
 
 .timeline-content .technologies span {
     display: inline-block;
     margin: 5px 5px 0 0;
-    background: #e3f2fd;
-    color: #007BFF;
+    background: #333; /* Darker gray for tech badges */
+    color: #FFD700; /* Gold text for badges */
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
