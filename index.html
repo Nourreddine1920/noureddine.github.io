@@ -57,11 +57,11 @@
            <h2 class="mb-4">About Me</h2>
            <p><i>I am a passionate and driven Embedded Software Engineer 🚀 at ACTIA Engineering Services in Ariana, Tunisia. With a deep enthusiasm for technology and embedded systems, I specialize in creating innovative solutions that seamlessly integrate hardware and software to deliver high-performance, reliable systems.</i></p>
            <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('Experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('Education')">Education</p>
-                    <p class="tab-links  " onclick="opentab('Projects')">Projects</p>
-                    <p class="tab-links  " onclick="opentab('Skills')">Skills</p>
-            </div>
+            <p class="tab-links active-link" onclick="opentab('Experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('Education')">Education</p>
+            <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+            <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+        </div>
             </div>
               
             <div class="experience-timeline" id="Experience">
@@ -392,29 +392,40 @@ nav ul li a:hover::after{
     flex-basis: 60%;
 }
 
-.tab-titles{
+.tab-titles {
     display: flex;
-    margin: 20px 0 40px;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    padding: 10px;
+    background-color: #111; /* Black background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
-.tab-links{
-    margin-right: 50px;
-    font-size:  18PX; ;
-    font-weight:500 ;
+
+.tab-links {
+    color: #FFD700; /* Gold color */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
-    position: relative;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-align: center;
 }
-.tab-links::after{
-    content: '';
-    width: 0;
-    height:3px ;
-    background: #0044ff;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
+
+.tab-links:hover {
+    background-color: #FFD700; /* Gold highlight */
+    color: #111; /* Black text on hover */
+    transform: scale(1.1); /* Subtle zoom effect */
 }
-.tab-links.active-link::after{
-    width: 50%;
+
+.active-link {
+    background-color: #FFD700; /* Gold highlight for active */
+    color: #111; /* Black text for active */
+    box-shadow: 0px 0px 10px #FFD700; /* Glow effect for active */
+    border-radius: 5px;
 }
 .tab-contents ul li {
     list-style: none;
@@ -819,21 +830,29 @@ color: #1063c1;
     
     <script src="js/main.js"></script>
     
-<script>
-    var tl = document.getElementsByClassName("tab-links")
-    var tc = document.getElementsByClassName("tab-contents")
-    function opentab(tabname){
-
-    for(i of tl){
-        i.classList.remove("active-link");
-    }
-    for(j of tc){
-        j.classList.remove("active");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active");
-    }
-</script>
+    <script>
+        function opentab(tabId) {
+            // First, remove the 'active-link' class from all tabs
+            const tabs = document.querySelectorAll('.tab-links');
+            tabs.forEach(tab => {
+                tab.classList.remove('active-link');
+            });
+    
+            // Hide all tab content
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.style.display = 'none';
+            });
+    
+            // Show the content of the selected tab
+            document.getElementById(tabId).style.display = 'block';
+    
+            // Add 'active-link' class to the clicked tab
+            const activeTab = document.querySelector(`.tab-links[onclick="opentab('${tabId}')"]`);
+            activeTab.classList.add('active-link');
+        }
+    </script>
+    
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
