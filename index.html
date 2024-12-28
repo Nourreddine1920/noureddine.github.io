@@ -429,12 +429,15 @@ nav ul li a:hover::after{
 font-size: 14px;
 color: #1063c1;
 }
-.tab-contents{
+
+.tab-contents {
     display: none;
 }
-.tab-contents.active{
+
+.tab-contents.active {
     display: block;
 }
+
 
 .skills-section {
     width: 90%;
@@ -825,29 +828,32 @@ color: #1063c1;
     <script src="js/main.js"></script>
     
     <script>
-        function opentab(tabId) {
-            // First, remove the 'active-link' class from all tabs
-            const tabs = document.querySelectorAll('.tab-links');
-            tabs.forEach(tab => {
-                tab.classList.remove('active-link');
-            });
+function opentab(tabId) {
+    // Remove the 'active-link' class from all tabs
+    const tabs = document.querySelectorAll('.tab-links');
+    tabs.forEach(tab => {
+        tab.classList.remove('active-link');
+    });
 
-            // Hide all tab content
-            const tabContents = document.querySelectorAll('.tab-contents');
-            tabContents.forEach(content => {
-                content.style.display = 'none';
-            });
+    // Hide all tab contents
+    const tabContents = document.querySelectorAll('.tab-contents');
+    tabContents.forEach(content => {
+        content.style.display = 'none'; // Ensure all other tabs are hidden
+    });
 
-            // Show the content of the selected tab
-            const selectedTabContent = document.getElementById(tabId);
-            if (selectedTabContent) {
-                selectedTabContent.style.display = 'block';
-            }
+    // Show the selected tab content
+    const selectedTabContent = document.getElementById(tabId);
+    if (selectedTabContent) {
+        selectedTabContent.style.display = 'block'; // Display the clicked tab's content
+    }
 
-            // Add 'active-link' class to the clicked tab
-            const activeTab = document.querySelector(`.tab-links[onclick="opentab('${tabId}')"]`);
-            activeTab.classList.add('active-link');
+    // Add 'active-link' class to the clicked tab
+    tabs.forEach(tab => {
+        if (tab.getAttribute('onclick') === `opentab('${tabId}')`) {
+            tab.classList.add('active-link');
         }
+    });
+}
 
     </script>
     
