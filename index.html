@@ -152,34 +152,45 @@
                     </div>
                 </div>
             </div>                
-            <div class="tab-contents education-section" id="Education" style="display: none;">
-                <h2 class="section-Education">Education</h2>
-                <div class="timeline-education">
-                    <div class="timeline-education-item" data-aos="fade-up" data-aos-delay="100">
-                        <div class="timeline-education-date">09/2022 – Present</div>
-                        <div class="timeline-education-content">
+            <div class="tab-contents experience-section" id="Education" style="display: none;">
+                <h2 class="section-title">Education</h2>
+                <div class="cards-container">
+                    <!-- Education 1 -->
+                    <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-header">
                             <h3>National School of Electronics and Telecommunications of Sfax</h3>
-                            <p>Engineering degree in Communication Electronics</p>
-                            <span class="timeline-education-location">Sfax, Tunisia</span>
+                            <span class="date">09/2022 – Present</span>
+                        </div>
+                        <p class="card-description">Pursuing an engineering degree in Communication Electronics.</p>
+                        <div class="card-footer">
+                            <span class="location">Sfax, Tunisia</span>
                         </div>
                     </div>
-                    <div class="timeline-education-item" data-aos="fade-up" data-aos-delay="200">
-                        <div class="timeline-education-date">09/2020 – 06/2022</div>
-                        <div class="timeline-education-content">
+                    <!-- Education 2 -->
+                    <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-header">
                             <h3>Preparatory Institute for Engineering Studies in Monastir</h3>
-                            <p>Passed the National Exam (Physics-Chemistry)</p>
+                            <span class="date">09/2020 – 06/2022</span>
+                        </div>
+                        <p class="card-description">Passed the National Exam (Physics-Chemistry).</p>
+                        <div class="card-footer">
+                            <span class="location">Monastir, Tunisia</span>
                         </div>
                     </div>
-                    <div class="timeline-education-item" data-aos="fade-up" data-aos-delay="300">
-                        <div class="timeline-education-date">2016 – 2020</div>
-                        <div class="timeline-education-content">
+                    <!-- Education 3 -->
+                    <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-header">
                             <h3>High School Abou Kacem Chebbi</h3>
-                            <span class="timeline-education-location">Jammel, Tunisia</span>
+                            <span class="date">2016 – 2020</span>
+                        </div>
+                        <p class="card-description">Earned a high school diploma.</p>
+                        <div class="card-footer">
+                            <span class="location">Jammel, Tunisia</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
+                        
             <div class="tab-contents" id="Projects" style="display:none;">
                     <ul>
                         
@@ -737,81 +748,74 @@ color: #1063c1;
     }
 }
 
-/* Education Section */
-.education-section {
-    padding: 2rem;
-    background-color: #1a1a1a;
+/* Education Section - Styled to Match Experience Section */
+.experience-section {
+    padding: 3rem;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+    margin-top: 2rem;
     color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    margin-top: 1.5rem;
 }
 
-.section-Education {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+.section-title {
+    font-size: 2.5rem;
     text-align: center;
-    color: #00bcd4;
-}
-
-.timeline-education {
-    position: relative;
-    margin-top: 1rem;
-}
-
-.timeline-education-item {
-    position: relative;
-    margin: 1.5rem 0;
-    padding-left: 2.5rem;
-    border-left: 2px solid #00bcd4;
-}
-
-.timeline-education-item:last-child {
-    border-left: none;
-}
-
-.timeline-education-date {
-    position: absolute;
-    left: -100px;
-    top: 0;
+    margin-bottom: 2rem;
+    color: #ff6f61;
+    text-transform: uppercase;
     font-weight: bold;
-    color: #00bcd4;
-    font-size: 1.2rem;
-    width: 90px;
-    text-align: right;
 }
 
-.timeline-education-content {
-    background: #292929;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Card Styling */
+.experience-card {
+    background-color: #292929;
+    border: 2px solid #ff6f61;
+    border-radius: 12px;
+    padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.timeline-education-content h3 {
-    margin: 0 0 0.5rem;
-    color: #ffffff;
-    font-size: 1.3rem;
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
 }
 
-.timeline-education-content p {
-    margin: 0.5rem 0 0;
+/* Card Header */
+.card-header h3 {
+    font-size: 1.5rem;
+    color: #f5f5f5;
+    margin-bottom: 0.5rem;
+}
+
+.card-header .date {
     font-size: 1rem;
-    color: #cfcfcf;
+    color: #ff6f61;
+    font-weight: bold;
 }
 
-.timeline-education-content .timeline-education-location {
+/* Card Description */
+.card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+    color: #d9d9d9;
+}
+
+/* Card Footer */
+.card-footer .location {
     font-size: 0.9rem;
-    color: #999;
+    color: #a6a6a6;
     font-style: italic;
-    margin-top: 0.3rem;
-}
-
-.timeline-education-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
 </style>
