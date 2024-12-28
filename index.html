@@ -157,6 +157,7 @@
                 <div class="cards-container">
                     <!-- Education 1 -->
                     <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="background-overlay"></div>
                         <div class="card-header">
                             <h3>National School of Electronics and Telecommunications of Sfax</h3>
                             <span class="date">09/2022 – Present</span>
@@ -168,6 +169,7 @@
                     </div>
                     <!-- Education 2 -->
                     <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="background-overlay"></div>
                         <div class="card-header">
                             <h3>Preparatory Institute for Engineering Studies in Monastir</h3>
                             <span class="date">09/2020 – 06/2022</span>
@@ -179,6 +181,7 @@
                     </div>
                     <!-- Education 3 -->
                     <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="background-overlay"></div>
                         <div class="card-header">
                             <h3>High School Abou Kacem Chebbi</h3>
                             <span class="date">2016 – 2020</span>
@@ -190,7 +193,7 @@
                     </div>
                 </div>
             </div>
-                        
+                                    
             <div class="tab-contents" id="Projects" style="display:none;">
                     <ul>
                         
@@ -748,7 +751,7 @@ color: #1063c1;
     }
 }
 
-/* Education Section - Styled to Match Experience Section */
+/* Education Section - With Background Images & Animations */
 .experience-section {
     padding: 3rem;
     background-color: #1e1e1e;
@@ -776,18 +779,34 @@ color: #1063c1;
 
 /* Card Styling */
 .experience-card {
-    background-color: #292929;
+    background-color: rgba(41, 41, 41, 0.95);
     border: 2px solid #ff6f61;
     border-radius: 12px;
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
+/* Hover Effects */
 .experience-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Background Overlay */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('assests/education.jpg') center/cover no-repeat;
+    opacity: 0.15;
+    z-index: -1;
+    border-radius: 12px;
+    filter: grayscale(100%);
 }
 
 /* Card Header */
@@ -816,6 +835,26 @@ color: #1063c1;
     font-size: 0.9rem;
     color: #a6a6a6;
     font-style: italic;
+}
+
+/* Animations - AOS */
+[data-aos] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition-property: opacity, transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-out;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Animation */
+.experience-card:hover .background-overlay {
+    opacity: 0.3;
+    filter: grayscale(0%);
 }
 
 </style>
