@@ -37,6 +37,9 @@
               
             </ul>
         </nav>
+        <button id="dark-mode-toggle" style="padding: 8px 16px; border: none; border-radius: 20px; background-color: var(--button-bg); color: var(--button-text); cursor: pointer; transition: all 0.3s;">
+            🌙 Dark Mode
+        </button>    
         <img class="a" src="IMAGES/nouriiiii.jpg" alt="noureddine">
         <div class="header-text">
            
@@ -381,7 +384,38 @@ nav ul li a:hover::after{
    
 
 
-} 
+}
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --button-bg: #007bff;
+    --button-text: #ffffff;
+}
+/* Dark Mode Variables */
+body.dark-mode {
+    --bg-color: #333333;
+    --text-color: #ffffff;
+    --button-bg: #555555;
+    --button-text: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    transition: background-color 0.3s;
+}
+
+button {
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
 /* ------------about--------------- */
 
 
@@ -1043,7 +1077,36 @@ function opentab(tabId) {
 }
 
     </script>
+<script>
+const toggleButton = document.getElementById('dark-mode-toggle');
+const body = document.body;
+
+toggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
     
+    // Update button text and emoji
+    if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀️ Light Mode';
+    } else {
+        toggleButton.textContent = '🌙 Dark Mode';
+    }
+});
+
+// Save preference to local storage
+toggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode);
+    toggleButton.textContent = isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode';
+});
+
+// Apply saved preference on page load
+if (localStorage.getItem('darkMode') === 'true') {
+    body.classList.add('dark-mode');
+    toggleButton.textContent = '☀️ Light Mode';
+}
+
+</script>
     
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
