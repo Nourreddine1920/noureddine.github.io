@@ -931,7 +931,7 @@ nav ul li a:hover::after{
             <div class="col-md-6 col-lg-3 d-flex">
                 <div class="align-self-stretch box p-4 text-center">
                     <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="icon-map-signs"></span>
+                        <span class="icon-map-signs icon"></span>
                     </div>
                     <h3 class="mb-4">Address</h3>
                     <p>Ariana, Tunis, Tunisia</p>
@@ -941,7 +941,7 @@ nav ul li a:hover::after{
             <div class="col-md-6 col-lg-3 d-flex">
                 <div class="align-self-stretch box p-4 text-center">
                     <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="icon-phone2"></span>
+                        <span class="icon-phone2 icon"></span>
                     </div>
                     <h3 class="mb-4">Contact Number</h3>
                     <p><a href="tel://0021654615475">+216 98 790 520</a></p>
@@ -956,12 +956,12 @@ nav ul li a:hover::after{
                     <h3 class="mb-4">Email Address</h3>
                     <p><a href="mailto:noureddine.awledbrahim@gmail.com">noureddine.awledbrahim@gmail.com</a></p>
                 </div>
-            </div>
+            </div>            
             <!-- Resume Link -->
             <div class="col-md-6 col-lg-3 d-flex">
                 <div class="align-self-stretch box p-4 text-center">
                     <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="icon-globe"></span>
+                        <span class="icon-globe icon"></span>
                     </div>
                     <h3 class="mb-4">Download Resume</h3>
                     <p><a href="IMAGES/noureddine's personal portfolio.pdf">Resume Link</a></p>
@@ -1010,10 +1010,8 @@ nav ul li a:hover::after{
   
   <style>
 /* Contact Section Styling */
-/* Contact Section Styling */
 .contact-section {
     padding: 50px 0;
-    background-color: #fffaf0; /* Light golden background */
 }
 
 .heading-section h1.big {
@@ -1049,7 +1047,9 @@ nav ul li a:hover::after{
     background-color: #FFD700; /* Gold on hover */
     color: #333; /* Dark text for contrast */
 }
-
+.icon{
+    color: #FFD700; /* Gold icon */
+}
 .contact-info .icon {
     font-size: 32px;
     margin-bottom: 15px;
@@ -1070,8 +1070,12 @@ nav ul li a:hover::after{
 .contact-info a {
     color: #555; /* Neutral text color */
     transition: color 0.3s;
+    word-wrap: break-word; /* Fix for long text */
+    overflow-wrap: break-word; /* Ensures wrapping */
+    text-overflow: ellipsis; /* Adds '...' for overflow */
+    white-space: normal; /* Allows multi-line wrapping */
+    display: inline-block; /* Prevent alignment issues */
 }
-
 .contact-info a:hover {
     color: #FFD700; /* Gold on hover */
 }
