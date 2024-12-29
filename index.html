@@ -1010,6 +1010,7 @@ nav ul li a:hover::after{
   
   <style>
 /* Contact Section Styling */
+/* Contact Section Styling */
 .contact-section {
     padding: 50px 0;
 }
@@ -1017,8 +1018,7 @@ nav ul li a:hover::after{
 .heading-section h1.big {
     font-size: 60px;
     font-weight: bold;
-    color: #333;
-    opacity: 0.1;
+    color: rgba(255, 215, 0, 0.1); /* Gold with opacity for subtle effect */
     position: absolute;
     top: -30px;
     z-index: -1;
@@ -1028,33 +1028,70 @@ nav ul li a:hover::after{
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #FFD700; /* Gold */
+}
+
+.heading-section p {
+    color: #555; /* Neutral text color for readability */
 }
 
 .contact-info .box {
-    border: 1px solid #ddd;
+    border: 1px solid #FFD700; /* Gold border */
     border-radius: 8px;
     padding: 20px;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .contact-info .box:hover {
     transform: translateY(-10px);
-    background-color: #FFD700;
+    background-color: #FFD700; /* Gold on hover */
+    color: #333; /* Dark text for contrast */
 }
 
 .contact-info .icon {
     font-size: 32px;
     margin-bottom: 15px;
-    color: #FFD700;
+    color: #FFD700; /* Gold icons */
+    transition: color 0.3s;
 }
 
 .contact-info .icon:hover {
-    color: #fff;
+    color: #333; /* Darker color on hover */
+}
+
+.contact-info h3 {
+    color: #FFD700; /* Gold headings */
+    margin-bottom: 10px;
+}
+
+.contact-info p, 
+.contact-info a {
+    color: #555; /* Neutral text color */
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #FFD700; /* Gold on hover */
 }
 
 .question span {
-    color: #FFD700;
+    color: #FFD700; /* Gold emphasis */
     font-weight: bold;
+}
+
+.question a {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #FFD700; /* Gold button */
+    color: #fff; /* White text */
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.question a:hover {
+    background-color: #E6BE00; /* Slightly darker gold on hover */
+    transform: scale(1.1); /* Subtle hover effect */
 }
 
 .ftco-footer-social {
@@ -1068,13 +1105,13 @@ nav ul li a:hover::after{
 
 .ftco-footer-social a {
     font-size: 24px;
-    color: #FFD700;
+    color: #FFD700; /* Gold social icons */
     transition: color 0.3s, transform 0.3s;
 }
 
 .ftco-footer-social a:hover {
-    color: #333;
-    transform: scale(1.2);
+    color: #333; /* Dark hover color */
+    transform: scale(1.2); /* Hover scale effect */
 }
 
 /* Responsive Design */
