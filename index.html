@@ -197,65 +197,64 @@
             <div class="tab-contents" id="Projects" style="display:none;">
                 <h2 class="section-title">Projects</h2>
                 <div class="carousel-container">
-                    <!-- Project Item -->
-                    <div class="carousel-item" data-aos="fade-up">
-                        <div class="carousel-content">
-                            <h3>Smart Home System</h3>
-                            <p>
-                                📌 Designed and implemented a smart home system using Raspberry Pi and Python, integrating IoT devices for real-time monitoring and control.
-                            </p>
-                            <p class="technologies">
-                                <strong>Technologies:</strong> 
-                                <span>Python</span> <span>Raspberry Pi</span> <span>MQTT</span> <span>React</span>
-                            </p>
-                            <a href="https://github.com/Nourreddine1920/smart-home-system" target="_blank" class="project-link">View Project</a>
+                    <div class="carousel" id="projects-carousel">
+                        <!-- Project 1 -->
+                        <div class="carousel-item">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="path/to/project-image1.jpg" alt="Smart Home System">
+                                </div>
+                                <div class="project-info">
+                                    <h3>Smart Home System</h3>
+                                    <p>Designed and implemented a smart home system using Raspberry Pi and Python, integrating IoT devices for real-time monitoring and control.</p>
+                                    <p class="technologies">
+                                        <strong>Technologies:</strong> Python, Raspberry Pi, MQTT, React
+                                    </p>
+                                    <a href="https://github.com/Nourreddine1920/smart-home-system" target="_blank" class="project-link">View Project</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="carousel-image">
-                            <img src="path/to/project-image1.jpg" alt="Smart Home System">
+            
+                        <!-- Project 2 -->
+                        <div class="carousel-item">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="path/to/project-image2.jpg" alt="E-Commerce Website">
+                                </div>
+                                <div class="project-info">
+                                    <h3>E-Commerce Website</h3>
+                                    <p>Developed a responsive e-commerce platform with user authentication, cart functionality, and secure payment integration.</p>
+                                    <p class="technologies">
+                                        <strong>Technologies:</strong> React, Node.js, MongoDB, Stripe API
+                                    </p>
+                                    <a href="https://github.com/Nourreddine1920/ecommerce-platform" target="_blank" class="project-link">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Project 3 -->
+                        <div class="carousel-item">
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="path/to/project-image3.jpg" alt="Weather App">
+                                </div>
+                                <div class="project-info">
+                                    <h3>Weather App</h3>
+                                    <p>Built a weather forecasting app using the OpenWeatherMap API, featuring geolocation and a clean UI for real-time updates.</p>
+                                    <p class="technologies">
+                                        <strong>Technologies:</strong> React Native, OpenWeatherMap API, CSS
+                                    </p>
+                                    <a href="https://github.com/Nourreddine1920/weather-app" target="_blank" class="project-link">View Project</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
             
-                    <!-- Project Item -->
-                    <div class="carousel-item" data-aos="fade-up">
-                        <div class="carousel-content">
-                            <h3>E-Commerce Website</h3>
-                            <p>
-                                📌 Developed a responsive e-commerce platform with user authentication, cart functionality, and secure payment integration.
-                            </p>
-                            <p class="technologies">
-                                <strong>Technologies:</strong> 
-                                <span>React</span> <span>Node.js</span> <span>MongoDB</span> <span>Stripe API</span>
-                            </p>
-                            <a href="https://github.com/Nourreddine1920/ecommerce-platform" target="_blank" class="project-link">View Project</a>
-                        </div>
-                        <div class="carousel-image">
-                            <img src="path/to/project-image2.jpg" alt="E-Commerce Website">
-                        </div>
-                    </div>
-            
-                    <!-- Project Item -->
-                    <div class="carousel-item" data-aos="fade-up">
-                        <div class="carousel-content">
-                            <h3>Weather App</h3>
-                            <p>
-                                📌 Built a weather forecasting app using the OpenWeatherMap API, featuring geolocation and a clean UI for real-time updates.
-                            </p>
-                            <p class="technologies">
-                                <strong>Technologies:</strong> 
-                                <span>React Native</span> <span>OpenWeatherMap API</span> <span>CSS</span>
-                            </p>
-                            <a href="https://github.com/Nourreddine1920/weather-app" target="_blank" class="project-link">View Project</a>
-                        </div>
-                        <div class="carousel-image">
-                            <img src="path/to/project-image3.jpg" alt="Weather App">
-                        </div>
-                    </div>
+                    <!-- Carousel Navigation -->
+                    <button class="carousel-btn prev-btn" id="prev-btn">&#10094;</button>
+                    <button class="carousel-btn next-btn" id="next-btn">&#10095;</button>
                 </div>
-                <div class="carousel-buttons">
-                    <button class="prev-btn">&#10094;</button>
-                    <button class="next-btn">&#10095;</button>
-                </div>
-            
+                        
     </div>
     <div class="tab-contents" id="Skills" style="display:none;">
         <ul>
@@ -346,69 +345,74 @@
 
    <style>
 
-.projects-carousel {
-    margin: 50px 0;
-    padding: 20px;
+.projects-section {
+    padding: 50px 20px;
     background-color: #fffaf0;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.projects-carousel .section-title {
+.section-title {
     font-size: 2.5rem;
-    margin-bottom: 30px;
     color: #FFD700;
+    margin-bottom: 30px;
 }
 
 .carousel-container {
-    display: flex;
-    overflow: hidden;
     position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
 }
 
 .carousel-item {
     flex: 0 0 100%;
+    max-width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: transform 0.5s ease;
+    justify-content: center;
 }
 
-.carousel-content {
-    width: 50%;
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 600px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 15px;
     text-align: left;
-    padding: 20px;
 }
 
-.carousel-content h3 {
-    font-size: 1.8rem;
+.project-info h3 {
+    font-size: 1.5rem;
     color: #FFD700;
     margin-bottom: 10px;
 }
 
-.carousel-content p {
-    font-size: 1rem;
+.project-info p {
+    font-size: 0.9rem;
     color: #555;
-    margin-bottom: 15px;
-}
-
-.carousel-content .technologies span {
-    background-color: #FFD700;
-    color: #333;
-    font-size: 0.875rem;
-    padding: 5px 10px;
-    margin-right: 5px;
-    border-radius: 20px;
-    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .project-link {
-    text-decoration: none;
     color: #FFD700;
     font-weight: bold;
-    margin-top: 10px;
-    display: inline-block;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
@@ -416,34 +420,32 @@
     color: #333;
 }
 
-.carousel-image img {
-    width: 40%;
-    border-radius: 8px;
-}
-
-.carousel-buttons {
+.carousel-btn {
     position: absolute;
     top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
     transform: translateY(-50%);
-}
-
-.prev-btn, .next-btn {
-    background-color: #FFD700;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
-    padding: 10px 20px;
+    font-size: 2rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    padding: 10px 15px;
+    z-index: 10;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
     transition: background-color 0.3s ease;
 }
 
-.prev-btn:hover, .next-btn:hover {
-    background-color: #333;
-    color: #FFD700;
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
 }
 
 
@@ -1337,7 +1339,39 @@ function opentab(tabId) {
 
     </script>
     
-    
+    <script>
+const carousel = document.getElementById('projects-carousel');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+
+let currentSlide = 0;
+
+function updateCarousel() {
+    const totalSlides = document.querySelectorAll('.carousel-item').length;
+    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    prevBtn.style.display = currentSlide === 0 ? 'none' : 'block';
+    nextBtn.style.display = currentSlide === totalSlides - 1 ? 'none' : 'block';
+}
+
+prevBtn.addEventListener('click', () => {
+    if (currentSlide > 0) {
+        currentSlide--;
+        updateCarousel();
+    }
+});
+
+nextBtn.addEventListener('click', () => {
+    const totalSlides = document.querySelectorAll('.carousel-item').length;
+    if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateCarousel();
+    }
+});
+
+updateCarousel(); // Initialize carousel
+
+
+    </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
