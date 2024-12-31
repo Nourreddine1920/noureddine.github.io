@@ -197,7 +197,7 @@
             <div class="tab-contents" id="Projects" style="display:none;">
                 <h2 class="section-title">Projects</h2>
                 <div class="carousel-container">
-                    <div class="carousel" id="projects-carousel">
+                    <div class="carousel">
                         <!-- Project 1 -->
                         <div class="carousel-item">
                             <div class="project-card">
@@ -251,10 +251,9 @@
                     </div>
             
                     <!-- Carousel Navigation -->
-                    <button class="carousel-btn prev-btn" id="prev-btn">&#10094;</button>
-                    <button class="carousel-btn next-btn" id="next-btn">&#10095;</button>
-                </div>
-                        
+                    <button class="carousel-btn prev-btn">&#10094;</button>
+                    <button class="carousel-btn next-btn">&#10095;</button>
+                </div>                        
     </div>
     <div class="tab-contents" id="Skills" style="display:none;">
         <ul>
@@ -1340,35 +1339,46 @@ function opentab(tabId) {
     </script>
     
     <script>
-const carousel = document.getElementById('projects-carousel');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
+// Get references to carousel and buttons
+const carousel = document.querySelector('.carousel');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
 
-let currentSlide = 0;
+// Track the current slide index
+let currentIndex = 0;
 
+// Function to update carousel position
 function updateCarousel() {
+    // Calculate total number of slides
     const totalSlides = document.querySelectorAll('.carousel-item').length;
-    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-    prevBtn.style.display = currentSlide === 0 ? 'none' : 'block';
-    nextBtn.style.display = currentSlide === totalSlides - 1 ? 'none' : 'block';
+    
+    // Update the transform property for the carousel
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    // Hide/show navigation buttons based on current slide index
+    prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+    nextBtn.style.display = currentIndex === totalSlides - 1 ? 'none' : 'block';
 }
 
+// Event listeners for previous and next buttons
 prevBtn.addEventListener('click', () => {
-    if (currentSlide > 0) {
-        currentSlide--;
+    if (currentIndex > 0) {
+        currentIndex--;
         updateCarousel();
     }
 });
 
 nextBtn.addEventListener('click', () => {
     const totalSlides = document.querySelectorAll('.carousel-item').length;
-    if (currentSlide < totalSlides - 1) {
-        currentSlide++;
+    if (currentIndex < totalSlides - 1) {
+        currentIndex++;
         updateCarousel();
     }
 });
 
-updateCarousel(); // Initialize carousel
+// Initialize carousel on page load
+updateCarousel();
+
 
 
     </script>
