@@ -197,20 +197,16 @@
             <div class="tab-contents" id="Projects" style="display:none;">
                 <h2 class="section-title">Projects</h2>
                 <div class="carousel-container">
-                    <div class="carousel" id="projects-carousel">
+                    <div class="carousel">
                         <!-- Project 1 -->
                         <div class="carousel-item">
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="path/to/project-image1.jpg" alt="Smart Home System">
+                                    <img src="path/to/project-image1.jpg" alt="Project 1">
                                 </div>
                                 <div class="project-info">
-                                    <h3>Smart Home System</h3>
-                                    <p>Designed and implemented a smart home system using Raspberry Pi and Python, integrating IoT devices for real-time monitoring and control.</p>
-                                    <p class="technologies">
-                                        <strong>Technologies:</strong> Python, Raspberry Pi, MQTT, React
-                                    </p>
-                                    <a href="https://github.com/Nourreddine1920/smart-home-system" target="_blank" class="project-link">View Project</a>
+                                    <h3>Project 1</h3>
+                                    <p>Description of project 1 goes here.</p>
                                 </div>
                             </div>
                         </div>
@@ -219,15 +215,11 @@
                         <div class="carousel-item">
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="path/to/project-image2.jpg" alt="E-Commerce Website">
+                                    <img src="path/to/project-image2.jpg" alt="Project 2">
                                 </div>
                                 <div class="project-info">
-                                    <h3>E-Commerce Website</h3>
-                                    <p>Developed a responsive e-commerce platform with user authentication, cart functionality, and secure payment integration.</p>
-                                    <p class="technologies">
-                                        <strong>Technologies:</strong> React, Node.js, MongoDB, Stripe API
-                                    </p>
-                                    <a href="https://github.com/Nourreddine1920/ecommerce-platform" target="_blank" class="project-link">View Project</a>
+                                    <h3>Project 2</h3>
+                                    <p>Description of project 2 goes here.</p>
                                 </div>
                             </div>
                         </div>
@@ -236,26 +228,21 @@
                         <div class="carousel-item">
                             <div class="project-card">
                                 <div class="project-image">
-                                    <img src="path/to/project-image3.jpg" alt="Weather App">
+                                    <img src="path/to/project-image3.jpg" alt="Project 3">
                                 </div>
                                 <div class="project-info">
-                                    <h3>Weather App</h3>
-                                    <p>Built a weather forecasting app using the OpenWeatherMap API, featuring geolocation and a clean UI for real-time updates.</p>
-                                    <p class="technologies">
-                                        <strong>Technologies:</strong> React Native, OpenWeatherMap API, CSS
-                                    </p>
-                                    <a href="https://github.com/Nourreddine1920/weather-app" target="_blank" class="project-link">View Project</a>
+                                    <h3>Project 3</h3>
+                                    <p>Description of project 3 goes here.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
             
-                    <!-- Carousel Navigation -->
-                    <button class="carousel-btn prev-btn" id="prev-btn">&#10094;</button>
-                    <button class="carousel-btn next-btn" id="next-btn">&#10095;</button>
+                    <!-- Navigation Buttons -->
+                    <button class="carousel-btn prev-btn">&#10094;</button>
+                    <button class="carousel-btn next-btn">&#10095;</button>
                 </div>
-                        
-    </div>
+                </div>
     <div class="tab-contents" id="Skills" style="display:none;">
         <ul>
             <section id="skills" class="skills-section">
@@ -360,21 +347,20 @@
 
 .carousel-container {
     position: relative;
-    max-width: 100%;
-    overflow: hidden;
+    overflow: hidden; /* Hide overflow to show only one item at a time */
+    width: 100%;
+    max-width: 100%; /* Adjust width if needed */
 }
 
 .carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 20px;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
 }
 
 .carousel-item {
-    flex: 0 0 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
+    flex: 0 0 100%; /* Ensure each item takes 100% width */
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .project-card {
@@ -424,20 +410,12 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    font-size: 2rem;
+    padding: 10px 20px;
     cursor: pointer;
-    padding: 10px 15px;
-    z-index: 10;
-    border-radius: 50%;
-    outline: none;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
 }
 
 .prev-btn {
@@ -1340,35 +1318,45 @@ function opentab(tabId) {
     </script>
     
     <script>
-const carousel = document.getElementById('projects-carousel');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
+// Get references to carousel and buttons
+const carousel = document.querySelector('.carousel');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
 
-let currentSlide = 0;
+// Track the current slide index
+let currentIndex = 0;
 
+// Get the total number of items
+const totalSlides = document.querySelectorAll('.carousel-item').length;
+
+// Function to update carousel position
 function updateCarousel() {
-    const totalSlides = document.querySelectorAll('.carousel-item').length;
-    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-    prevBtn.style.display = currentSlide === 0 ? 'none' : 'block';
-    nextBtn.style.display = currentSlide === totalSlides - 1 ? 'none' : 'block';
+    // Move the carousel based on the current index
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    // Manage button visibility
+    prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+    nextBtn.style.display = currentIndex === totalSlides - 1 ? 'none' : 'block';
 }
 
+// Initialize carousel on page load
+updateCarousel();
+
+// Event listeners for navigation buttons
 prevBtn.addEventListener('click', () => {
-    if (currentSlide > 0) {
-        currentSlide--;
+    if (currentIndex > 0) {
+        currentIndex--;
         updateCarousel();
     }
 });
 
 nextBtn.addEventListener('click', () => {
-    const totalSlides = document.querySelectorAll('.carousel-item').length;
-    if (currentSlide < totalSlides - 1) {
-        currentSlide++;
+    if (currentIndex < totalSlides - 1) {
+        currentIndex++;
         updateCarousel();
     }
 });
 
-updateCarousel(); // Initialize carousel
 
 
     </script>
