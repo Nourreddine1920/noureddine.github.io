@@ -195,11 +195,63 @@
             </div>
                                     
             <div class="tab-contents" id="Projects" style="display:none;">
-                    <ul>
-                        
-                      
-                    </ul>
-            </div>
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project Item -->
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="path/to/project-image1.jpg" alt="Project Image 1">
+                        </div>
+                        <div class="project-content">
+                            <h3>Smart Home System</h3>
+                            <p class="project-description">
+                                📌 Designed and implemented a smart home system using Raspberry Pi and Python, integrating IoT devices for real-time monitoring and control.
+                            </p>
+                            <p class="technologies">
+                                <strong>Technologies:</strong>
+                                <span>Python</span> <span>Raspberry Pi</span> <span>MQTT</span> <span>React</span>
+                            </p>
+                            <a href="https://github.com/Nourreddine1920/smart-home-system" target="_blank" class="project-link">View Project</a>
+                        </div>
+                    </div>
+            
+                    <!-- Project Item -->
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="path/to/project-image2.jpg" alt="Project Image 2">
+                        </div>
+                        <div class="project-content">
+                            <h3>E-Commerce Website</h3>
+                            <p class="project-description">
+                                📌 Developed a responsive e-commerce platform with user authentication, cart functionality, and secure payment integration.
+                            </p>
+                            <p class="technologies">
+                                <strong>Technologies:</strong>
+                                <span>React</span> <span>Node.js</span> <span>MongoDB</span> <span>Stripe API</span>
+                            </p>
+                            <a href="https://github.com/Nourreddine1920/ecommerce-platform" target="_blank" class="project-link">View Project</a>
+                        </div>
+                    </div>
+            
+                    <!-- Project Item -->
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-image">
+                            <img src="path/to/project-image3.jpg" alt="Project Image 3">
+                        </div>
+                        <div class="project-content">
+                            <h3>Weather App</h3>
+                            <p class="project-description">
+                                📌 Built a weather forecasting app using the OpenWeatherMap API, featuring geolocation and a clean UI for real-time updates.
+                            </p>
+                            <p class="technologies">
+                                <strong>Technologies:</strong>
+                                <span>React Native</span> <span>OpenWeatherMap API</span> <span>CSS</span>
+                            </p>
+                            <a href="https://github.com/Nourreddine1920/weather-app" target="_blank" class="project-link">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                        </div>
 
         </div>
 
@@ -293,13 +345,93 @@
 
    <style>
 
+.projects-section {
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #fffaf0; /* Light golden background */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #FFD700; /* Gold title */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #FFD700; /* Gold border */
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    color: #FFD700; /* Gold title */
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #555; /* Neutral text */
+    margin-bottom: 15px;
+}
+
+.project-content .technologies span {
+    background-color: #FFD700;
+    color: #333;
+    font-size: 0.875rem;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #FFD700;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #333; /* Dark text on hover */
+}
 
 
-    *{
+*{
 
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
     background: #080008;
@@ -931,7 +1063,7 @@ nav ul li a:hover::after{
             <div class="col-md-6 col-lg-3 d-flex">
                 <div class="align-self-stretch box p-4 text-center">
                     <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="icons"></span>
+                        <span class="icon-map-signs" id="icon"></span>
                     </div>
                     <h3 class="mb-4">Address</h3>
                     <p>Ariana, Tunis, Tunisia</p>
@@ -941,7 +1073,7 @@ nav ul li a:hover::after{
             <div class="col-md-6 col-lg-3 d-flex">
                 <div class="align-self-stretch box p-4 text-center">
                     <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="icons"></span>
+                        <span class="icon-phone2" id="icon"></span>
                     </div>
                     <h3 class="mb-4">Contact Number</h3>
                     <p><a href="tel://0021654615475">+216 98 790 520</a></p>
@@ -951,7 +1083,7 @@ nav ul li a:hover::after{
             <div class="col-md-6 col-lg-3 d-flex">
                 <div class="align-self-stretch box p-4 text-center">
                     <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="icons"></span>
+                        <span class="icon-paper-plane" id="icon"></span>
                     </div>
                     <h3 class="mb-4">Email Address</h3>
                         <p><a href="mailto:noureddine.awledbrahim@gmail.com">noureddine.awled-<br>
@@ -962,7 +1094,7 @@ nav ul li a:hover::after{
             <div class="col-md-6 col-lg-3 d-flex">
                 <div class="align-self-stretch box p-4 text-center">
                     <div class="icon d-flex align-items-center justify-content-center">
-                        <span class="icons"></span>
+                        <span class="icon-globe" id="icon"></span>
                     </div>
                     <h3 class="mb-4">Download Resume</h3>
                     <p><a href="IMAGES/noureddine's personal portfolio.pdf">Resume Link</a></p>
