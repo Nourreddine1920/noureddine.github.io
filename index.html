@@ -1351,8 +1351,9 @@ prevBtn.addEventListener('click', () => {
 });
 
 nextBtn.addEventListener('click', () => {
-    if (currentIndex < totalSlides - 1) {
-        currentIndex++;
+    const totalSlides = document.querySelectorAll('.carousel-item').length;
+    if (currentSlide < totalSlides - 1) {
+        currentSlide++;
         updateCarousel();
     }
 });
