@@ -196,65 +196,66 @@
                                     
             <div class="tab-contents" id="Projects" style="display:none;">
                 <h2 class="section-title">Projects</h2>
-                <div class="projects-grid">
+                <div class="carousel-container">
                     <!-- Project Item -->
-                    <div class="project-card" data-aos="fade-up">
-                        <div class="project-image">
-                            <img src="path/to/project-image1.jpg" alt="Project Image 1">
-                        </div>
-                        <div class="project-content">
+                    <div class="carousel-item" data-aos="fade-up">
+                        <div class="carousel-content">
                             <h3>Smart Home System</h3>
-                            <p class="project-description">
+                            <p>
                                 📌 Designed and implemented a smart home system using Raspberry Pi and Python, integrating IoT devices for real-time monitoring and control.
                             </p>
                             <p class="technologies">
-                                <strong>Technologies:</strong>
+                                <strong>Technologies:</strong> 
                                 <span>Python</span> <span>Raspberry Pi</span> <span>MQTT</span> <span>React</span>
                             </p>
                             <a href="https://github.com/Nourreddine1920/smart-home-system" target="_blank" class="project-link">View Project</a>
                         </div>
+                        <div class="carousel-image">
+                            <img src="path/to/project-image1.jpg" alt="Smart Home System">
+                        </div>
                     </div>
             
                     <!-- Project Item -->
-                    <div class="project-card" data-aos="fade-up">
-                        <div class="project-image">
-                            <img src="path/to/project-image2.jpg" alt="Project Image 2">
-                        </div>
-                        <div class="project-content">
+                    <div class="carousel-item" data-aos="fade-up">
+                        <div class="carousel-content">
                             <h3>E-Commerce Website</h3>
-                            <p class="project-description">
+                            <p>
                                 📌 Developed a responsive e-commerce platform with user authentication, cart functionality, and secure payment integration.
                             </p>
                             <p class="technologies">
-                                <strong>Technologies:</strong>
+                                <strong>Technologies:</strong> 
                                 <span>React</span> <span>Node.js</span> <span>MongoDB</span> <span>Stripe API</span>
                             </p>
                             <a href="https://github.com/Nourreddine1920/ecommerce-platform" target="_blank" class="project-link">View Project</a>
                         </div>
+                        <div class="carousel-image">
+                            <img src="path/to/project-image2.jpg" alt="E-Commerce Website">
+                        </div>
                     </div>
             
                     <!-- Project Item -->
-                    <div class="project-card" data-aos="fade-up">
-                        <div class="project-image">
-                            <img src="path/to/project-image3.jpg" alt="Project Image 3">
-                        </div>
-                        <div class="project-content">
+                    <div class="carousel-item" data-aos="fade-up">
+                        <div class="carousel-content">
                             <h3>Weather App</h3>
-                            <p class="project-description">
+                            <p>
                                 📌 Built a weather forecasting app using the OpenWeatherMap API, featuring geolocation and a clean UI for real-time updates.
                             </p>
                             <p class="technologies">
-                                <strong>Technologies:</strong>
+                                <strong>Technologies:</strong> 
                                 <span>React Native</span> <span>OpenWeatherMap API</span> <span>CSS</span>
                             </p>
                             <a href="https://github.com/Nourreddine1920/weather-app" target="_blank" class="project-link">View Project</a>
                         </div>
+                        <div class="carousel-image">
+                            <img src="path/to/project-image3.jpg" alt="Weather App">
+                        </div>
                     </div>
                 </div>
-                        </div>
-
-        </div>
-
+                <div class="carousel-buttons">
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+            
     </div>
     <div class="tab-contents" id="Skills" style="display:none;">
         <ul>
@@ -345,65 +346,54 @@
 
    <style>
 
-.projects-section {
+.projects-carousel {
     margin: 50px 0;
     padding: 20px;
-    background-color: #fffaf0; /* Light golden background */
+    background-color: #fffaf0;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.projects-section .section-title {
-    text-align: center;
+.projects-carousel .section-title {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: #FFD700; /* Gold title */
+    color: #FFD700;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background-color: #ffffff;
-    border: 1px solid #FFD700; /* Gold border */
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.carousel-container {
     display: flex;
-    flex-direction: column;
+    overflow: hidden;
+    position: relative;
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.carousel-item {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.5s ease;
 }
 
-.project-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.project-content {
+.carousel-content {
+    width: 50%;
+    text-align: left;
     padding: 20px;
 }
 
-.project-content h3 {
-    font-size: 1.5rem;
-    color: #FFD700; /* Gold title */
+.carousel-content h3 {
+    font-size: 1.8rem;
+    color: #FFD700;
     margin-bottom: 10px;
 }
 
-.project-description {
+.carousel-content p {
     font-size: 1rem;
-    color: #555; /* Neutral text */
+    color: #555;
     margin-bottom: 15px;
 }
 
-.project-content .technologies span {
+.carousel-content .technologies span {
     background-color: #FFD700;
     color: #333;
     font-size: 0.875rem;
@@ -423,7 +413,37 @@
 }
 
 .project-link:hover {
-    color: #333; /* Dark text on hover */
+    color: #333;
+}
+
+.carousel-image img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev-btn, .next-btn {
+    background-color: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #333;
+    color: #FFD700;
 }
 
 
