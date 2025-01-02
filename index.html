@@ -27,10 +27,10 @@
 </head>
 <body>
     <div id="header">
-        <div class="container">
-            <!-- Navigation -->
-            <nav>
-                <ul class="navbar">
+        <div class="header-container">
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <ul>
                     <li><a href="#About">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#Contact">Contact</a></li>
@@ -40,15 +40,16 @@
             <!-- Header Content -->
             <div class="header-content">
                 <!-- Profile Image -->
-                <img class="profile-image" src="IMAGES/nouriiiii.jpg" alt="Noureddine">
-                
+                <div class="image-container">
+                    <img class="profile-image" src="IMAGES/nouriiiii.jpg" alt="Noureddine">
+                </div>
+    
                 <!-- Text Section -->
                 <div class="header-text">
                     <h1>
-                        <i>
-                            <span class="highlight">Noureddine AWLED BRAHIM</span>
-                            Embedded Software Engineer
-                        </i>
+                        <span class="highlight">Noureddine AWLED BRAHIM</span>
+                        <br>
+                        Embedded Software Engineer
                     </h1>
                     <button class="btn">
                         <a href="IMAGES/noureddine's personal portfolio.pdf" target="_blank">DOWNLOAD CV</a>
@@ -502,124 +503,130 @@
 
 
 
-*{
-
+/* Reset Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* General Styling */
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
     background-color: #000; /* Black background */
     color: #FFD700; /* Gold text */
-}
-
-/* Container Setup */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Navigation Bar */
-nav {
-    width: 100%; /* Full width */
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.navbar {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar li {
-    margin: 0 15px;
-}
-
-.navbar li a {
-    text-decoration: none;
-    color: #FFD700;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.navbar li a:hover {
-    color: #fff; /* White on hover */
+    font-family: 'Arial', sans-serif;
 }
 
 /* Header Section */
 #header {
-    padding: 40px 20px;
+    padding: 50px 20px;
     background-color: #000; /* Black background */
-    color: #FFD700; /* Gold text */
 }
 
-/* Header Content: Align Image and Text */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFD700; /* Gold text */
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar li a:hover {
+    color: #FFF; /* White on hover */
+}
+
+/* Header Content */
 .header-content {
     display: flex;
-    align-items: center; /* Vertical alignment */
-    gap: 30px; /* Space between image and text */
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Wrap content for responsiveness */
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
 }
 
 /* Profile Image */
 .profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; /* Circular image */
-    border: 3px solid #FFD700; /* Gold border */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #FFD700; /* Gold border */
     object-fit: cover;
-    flex-shrink: 0; /* Prevent the image from resizing */
+    transition: transform 0.3s ease;
 }
 
-/* Header Text */
+.profile-image:hover {
+    transform: scale(1.1); /* Subtle zoom effect */
+}
+
+/* Text Section */
+.header-text {
+    flex: 2;
+    text-align: left;
+}
+
 .header-text h1 {
-    font-size: 28px;
-    line-height: 1.5;
+    font-size: 36px;
+    line-height: 1.4;
     color: #FFD700;
+    margin-bottom: 20px;
 }
 
 .header-text h1 .highlight {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: bold;
+    color: #FFF; /* White for highlight */
+    text-shadow: 0 0 5px #FFD700;
 }
 
 .header-text .btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #FFD700; /* Gold button */
+    padding: 10px 25px;
+    background-color: #FFD700;
     border: none;
     border-radius: 5px;
-    color: #000; /* Black text */
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.header-text .btn:hover {
-    background-color: #FFC300; /* Lighter gold */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .header-text .btn a {
     text-decoration: none;
-    color: #000;
+    color: #000; /* Black text */
+}
+
+.header-text .btn:hover {
+    background-color: #FFC300; /* Lighter gold */
+    transform: scale(1.05); /* Subtle hover effect */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: column; /* Stack image and text on smaller screens */
+        flex-direction: column;
         text-align: center;
-    }
-
-    .profile-image {
-        margin-bottom: 20px; /* Add spacing below the image */
     }
 
     .header-text {
@@ -627,41 +634,6 @@ nav {
     }
 }
 
-
-.a{
-    width: 300px;
-    height: 300px;
-    margin : 100px;
-    border-radius: 200px;
-    float: left;
-
-}
-.header-text{
-    margin: 10%;
-    font-size: 20px;
-}
-.header-text p{
-   text-align: center;
-}
-.header-text span{
-    color: #FFD700;
-    text-decoration:underline;
-}
-.Socia{
-    margin-top: 5px;
-   
-
-}
-.Social a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15PX;
-    display: inline-block;
-    color:#ababab;
-   
-
-
-} 
 /* ------------about--------------- */
 
 
@@ -921,19 +893,6 @@ nav {
 }
 .js{
   color: rgb(28, 98, 179);
-}
-.btn{
-    margin-left: 350px;
-    color: #fff;
-   background-color: #FFD700;
-
-    height: 40px;
-    width: 15%;
-    border-radius: 6px;
-    margin-bottom: 4px;
-}
-.btn a{
-    color:white;
 }
 
 .experience-timeline {
