@@ -28,14 +28,14 @@
 <body>
     <div id="header">
         <div class="header-container">
-            <!-- Navigation Bar -->
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
-            </nav>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#About">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
     
             <!-- Header Content -->
             <div class="header-content">
@@ -528,28 +528,67 @@ body {
     text-align: center;
 }
 
-/* Navigation Bar */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps it on top of everything */
+    border-bottom: 1px solid #FFD700;
+    width: 100%;
 }
 
-.navbar ul {
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 30px; /* Space between links */
 }
 
-.navbar li a {
+.nav-links li {
+    position: relative; /* For underline hover effect */
+}
+
+.nav-links li a {
     text-decoration: none;
-    font-size: 18px;
     color: #FFD700; /* Gold text */
-    transition: color 0.3s ease-in-out;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.navbar li a:hover {
+.nav-links li a:hover {
     color: #FFF; /* White on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Gold underline hover effect */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700; /* Gold underline */
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
 }
 
 /* Header Content */
