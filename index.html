@@ -38,12 +38,18 @@
             </ul>
         </nav>
         <img class="profile-image" src="IMAGES/nouriiiii.jpg" alt="Noureddine">
-        <div class="header-text">
-           
-            <h1> <i> <span>Noureddine AWLED BRAHIM </span>Embedded Software Engineer </i> </h1>
-        </div>
-        <button class="btn " > <a href="IMAGES\noureddine's personal portfolio.pdf" target="_blank">DOWNLOAD CV</a></button>
-    
+            <!-- Text Section -->
+            <div class="header-text">
+                <h1>
+                    <i>
+                        <span class="highlight">Noureddine AWLED BRAHIM</span>
+                        Embedded Software Engineer
+                    </i>
+                </h1>
+                <button class="btn">
+                    <a href="IMAGES/noureddine's personal portfolio.pdf" target="_blank">DOWNLOAD CV</a>
+                </button>
+            </div>    
         </div> 
        
     </div>
@@ -545,11 +551,60 @@ nav ul li a:hover::after{
 
 /* Profile Image */
 .profile-image {
-    width: 150px; /* Adjust size as needed */
-    height: 150px;
+    width: 300px; /* Adjust size as needed */
+    height: 300px;
     border-radius: 50%;
     border: 3px solid #FFD700; /* Gold border */
     object-fit: cover;
+}
+
+
+/* Header Text */
+.header-text h1 {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #FFD700; /* Gold */
+}
+
+.header-text h1 .highlight {
+    font-size: 28px;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.header-text .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Gold button */
+    border: none;
+    border-radius: 5px;
+    color: #000; /* Black text */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header-text .btn:hover {
+    background-color: #FFC300; /* Lighter gold */
+}
+
+.header-text .btn a {
+    text-decoration: none;
+    color: #000; /* Black text */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .about-me-content {
+        flex-direction: row; /* Align image and text side-by-side */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header-text {
+        text-align: left;
+        margin-left: 20px;
+    }
 }
 
 .a{
