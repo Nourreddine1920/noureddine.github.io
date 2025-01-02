@@ -26,33 +26,38 @@
     
 </head>
 <body>
-   <div id="header">
-    <div class="container">
-        <nav>
-            <!-- <h1> <i>Noureddine AWLED BRAHIM</i></h1> -->
-            <ul>
-                <li><a href="#About">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#Contact">Contact</a></li>
-              
-            </ul>
-        </nav>
-        <img class="profile-image" src="IMAGES/nouriiiii.jpg" alt="Noureddine">
-            <!-- Text Section -->
-            <div class="header-text">
-                <h1>
-                    <i>
-                        <span class="highlight">Noureddine AWLED BRAHIM</span>
-                        Embedded Software Engineer
-                    </i>
-                </h1>
-                <button class="btn">
-                    <a href="IMAGES/noureddine's personal portfolio.pdf" target="_blank">DOWNLOAD CV</a>
-                </button>
-            </div>    
-        </div> 
-       
+    <div id="header">
+        <div class="container">
+            <!-- Navigation -->
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Header Content -->
+            <div class="header-content">
+                <!-- Profile Image -->
+                <img class="profile-image" src="IMAGES/nouriiiii.jpg" alt="Noureddine">
+                
+                <!-- Text Section -->
+                <div class="header-text">
+                    <h1>
+                        <i>
+                            <span class="highlight">Noureddine AWLED BRAHIM</span>
+                            Embedded Software Engineer
+                        </i>
+                    </h1>
+                    <button class="btn">
+                        <a href="IMAGES/noureddine's personal portfolio.pdf" target="_blank">DOWNLOAD CV</a>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
+    
    <!-- ---------------------------------------About Section -------------------------------------------------- -->
    <section class="ftco-section contact-section ftco-no-pb" id="About">
     <div class="container">
@@ -503,72 +508,85 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background: #080008;
-    color: white;
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #FFD700; /* Gold text */
 }
-#header{
-    width: 100%;
-   
-   
-    background-size: cover;
-    background-position: center;
-}
-.container{
-padding: 10px 10%;
-margin: auto;
-}
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-}
-nav ul li a::after{
-   content: '';
-   width: 100%;
-   height: 3px;
-   background: #FFD700;
-   position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5 s;
-}
-nav ul li a:hover::after{
-    width: 100%;}
 
+/* Container Setup */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%; /* Full width */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: #fff; /* White on hover */
+}
+
+/* Header Section */
+#header {
+    padding: 40px 20px;
+    background-color: #000; /* Black background */
+    color: #FFD700; /* Gold text */
+}
+
+/* Header Content: Align Image and Text */
+.header-content {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    gap: 30px; /* Space between image and text */
+}
 
 /* Profile Image */
 .profile-image {
-    width: 300px; /* Adjust size as needed */
-    height: 300px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular image */
     border: 3px solid #FFD700; /* Gold border */
     object-fit: cover;
+    flex-shrink: 0; /* Prevent the image from resizing */
 }
-
 
 /* Header Text */
 .header-text h1 {
-    font-size: 24px;
+    font-size: 28px;
     line-height: 1.5;
-    color: #FFD700; /* Gold */
+    color: #FFD700;
 }
 
 .header-text h1 .highlight {
-    font-size: 28px;
-    color: #FFD700;
+    font-size: 32px;
     font-weight: bold;
 }
 
@@ -590,22 +608,25 @@ nav ul li a:hover::after{
 
 .header-text .btn a {
     text-decoration: none;
-    color: #000; /* Black text */
+    color: #000;
 }
 
 /* Responsive Design */
-@media (min-width: 768px) {
-    .about-me-content {
-        flex-direction: row; /* Align image and text side-by-side */
-        justify-content: center;
-        align-items: center;
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        text-align: center;
     }
-    
+
+    .profile-image {
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
     .header-text {
-        text-align: left;
-        margin-left: 20px;
+        text-align: center;
     }
 }
+
 
 .a{
     width: 300px;
