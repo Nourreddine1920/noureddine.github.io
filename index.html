@@ -544,9 +544,32 @@
 
             .project-description {
               font-size: 0.95rem;
-              line-height: 1.6;
-              color: #555;
-              margin: 0 0 10px;
+              line-height: 1.8; /* Improved readability */
+              color: #444; /* Better contrast */
+              margin-bottom: 15px; /* More spacing */
+              padding-left: 20px; /* Space for bullet */
+              position: relative;
+              border-left: 3px solid #6c63ff; /* Left border for emphasis */
+              background: linear-gradient(
+                90deg,
+                #f8f9fa,
+                #fff
+              ); /* Subtle gradient */
+              padding: 10px;
+              border-radius: 5px;
+              transition: background 0.3s ease; /* Smooth hover effect */
+            }
+
+            .project-description::before {
+              content: "•"; /* Bullet point */
+              color: #6c63ff;
+              position: absolute;
+              left: 0;
+              font-size: 1.2rem;
+            }
+
+            .project-description:hover {
+              background: #f8f9fa; /* Light background on hover */
             }
 
             .technologies {
