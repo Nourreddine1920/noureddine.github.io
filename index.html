@@ -317,6 +317,14 @@
                   <span>Jenkins</span><span>STM32</span><span>Gitlab</span
                   ><span>CubeProgrammer CLI</span>
                 </div>
+                <!-- GitHub Link -->
+                <a
+                  href="https://github.com/Nourreddine1920/pfa-front"
+                  class="github-link"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
               </div>
             </div>
 
@@ -345,6 +353,14 @@
                   ><span>STM32F429</span><span>UART</span
                   ><span>DHT11 Sensor</span><span>Git</span>
                 </div>
+                <!-- GitHub Link -->
+                <a
+                  href="https://github.com/Nourreddine1920/smart-house-front"
+                  class="github-link"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
               </div>
             </div>
 
@@ -592,7 +608,29 @@
               background-color: #ffd700; /* Gold background on hover */
               color: #000; /* Black text on hover */
             }
+            /* GitHub Link Styles */
+            .github-link {
+              display: inline-flex;
+              align-items: center;
+              text-decoration: none;
+              color: #ffd700; /* Golden text */
+              background-color: #333333; /* Dark gray background */
+              padding: 8px 15px;
+              border-radius: 5px;
+              border: 1px solid #ffd700; /* Golden border */
+              transition: background-color 0.3s ease, color 0.3s ease;
+              margin-top: 15px;
+            }
 
+            .github-link i {
+              margin-right: 8px;
+              font-size: 1.2rem;
+            }
+
+            .github-link:hover {
+              background-color: #ffd700; /* Golden background on hover */
+              color: #000000; /* Black text on hover */
+            }
             /* Media Query for Responsiveness */
             @media (max-width: 768px) {
               .project-card {
