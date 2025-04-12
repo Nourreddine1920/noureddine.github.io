@@ -467,46 +467,46 @@
             <div class="skill-category">
               <h3>Embedded Tools</h3>
               <div class="skills-grid">
-              <div class="skill" data-aos="flip-right" data-aos-delay="100">
-                <i class="fas fa-microchip"></i>
-                <span>STM32CubeMX</span>
-              </div>
-              <div class="skill" data-aos="flip-right" data-aos-delay="200">
-                <i class="fas fa-tools"></i>
-                <span>Segger J-Link</span>
-              </div>
-              <div class="skill" data-aos="flip-right" data-aos-delay="300">
-                <i class="fas fa-code"></i>
-                <span>Embedded Trace Debugging</span>
-              </div>
-              <div class="skill" data-aos="flip-right" data-aos-delay="400">
-                <i class="fas fa-chart-line"></i>
-                <span>Performance Profiling</span>
-              </div>
-              <div class="skill" data-aos="flip-right" data-aos-delay="500">
-                <i class="fas fa-database"></i>
-                <span>Memory Analyzer</span>
-              </div>
-              <div class="skill" data-aos="flip-right" data-aos-delay="600">
-                <i class="fas fa-bug"></i>
-                <span>Static Code Analysis</span>
-              </div>
-              <div class="skill" data-aos="flip-right" data-aos-delay="700">
-                <i class="fas fa-laptop-code"></i>
-                <span>Keil µVision</span>
-              </div>
-              <div class="skill" data-aos="flip-right" data-aos-delay="800">
-                <i class="fas fa-cogs"></i>
-                <span>Tracealyzer</span>
-              </div>
-              <div class="skill" data-aos="flip-right" data-aos-delay="900">
-                <i class="fas fa-project-diagram"></i>
-                <span>Enterprise Architect</span>
-              </div>
-              <div class="skill" data-aos="flip-right" data-aos-delay="1000">
-                <i class="fas fa-network-wired"></i>
-                <span>CANalyzer</span>
-              </div>
+                <div class="skill" data-aos="flip-right" data-aos-delay="100">
+                  <i class="fas fa-microchip"></i>
+                  <span>STM32CubeMX</span>
+                </div>
+                <div class="skill" data-aos="flip-right" data-aos-delay="200">
+                  <i class="fas fa-tools"></i>
+                  <span>Segger J-Link</span>
+                </div>
+                <div class="skill" data-aos="flip-right" data-aos-delay="300">
+                  <i class="fas fa-code"></i>
+                  <span>Embedded Trace Debugging</span>
+                </div>
+                <div class="skill" data-aos="flip-right" data-aos-delay="400">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Performance Profiling</span>
+                </div>
+                <div class="skill" data-aos="flip-right" data-aos-delay="500">
+                  <i class="fas fa-database"></i>
+                  <span>Memory Analyzer</span>
+                </div>
+                <div class="skill" data-aos="flip-right" data-aos-delay="600">
+                  <i class="fas fa-bug"></i>
+                  <span>Static Code Analysis</span>
+                </div>
+                <div class="skill" data-aos="flip-right" data-aos-delay="700">
+                  <i class="fas fa-laptop-code"></i>
+                  <span>Keil µVision</span>
+                </div>
+                <div class="skill" data-aos="flip-right" data-aos-delay="800">
+                  <i class="fas fa-cogs"></i>
+                  <span>Tracealyzer</span>
+                </div>
+                <div class="skill" data-aos="flip-right" data-aos-delay="900">
+                  <i class="fas fa-project-diagram"></i>
+                  <span>Enterprise Architect</span>
+                </div>
+                <div class="skill" data-aos="flip-right" data-aos-delay="1000">
+                  <i class="fas fa-network-wired"></i>
+                  <span>CANalyzer</span>
+                </div>
               </div>
             </div>
 
@@ -609,9 +609,6 @@
               transition: transform 0.3s ease-in-out;
             }
 
-            .project-card:hover .project-icon {
-            }
-
             .project-content {
               flex: 1;
               padding-right: 30px;
@@ -706,36 +703,58 @@
             /* Media Query for Responsiveness */
             @media (max-width: 768px) {
               .project-card {
-                flex-direction: column;
-                align-items: flex-start;
+              flex-direction: column;
+              align-items: flex-start;
+              padding: 20px; /* Adjust padding for smaller screens */
               }
 
               .project-icon {
-                margin-bottom: 20px;
+              margin-bottom: 20px;
+              font-size: 40px; /* Adjust icon size */
               }
 
               .project-content h3 {
-                font-size: 22px;
+              font-size: 20px; /* Adjust font size for smaller screens */
               }
 
               .project-description {
-                font-size: 14px;
+              font-size: 14px;
+              line-height: 1.6; /* Improve readability */
               }
 
               .technologies {
-                font-size: 12px;
+              font-size: 12px;
+              }
+            }
+
+            @media (max-width: 480px) {
+              .project-card {
+              padding: 15px; /* Further reduce padding for very small screens */
+              }
+
+              .project-content h3 {
+              font-size: 18px;
+              }
+
+              .project-description {
+              font-size: 12px;
+              }
+
+              .technologies span {
+              padding: 4px 8px; /* Adjust tag size */
+              font-size: 10px;
               }
             }
 
             /* Keyframe Animations */
             @keyframes fadeIn {
               0% {
-                opacity: 0;
-                transform: translateY(50px);
+              opacity: 0;
+              transform: translateY(50px);
               }
               100% {
-                opacity: 1;
-                transform: translateY(0);
+              opacity: 1;
+              transform: translateY(0);
               }
             }
 
@@ -750,6 +769,7 @@
               background-color: #000; /* Black background */
               color: #ffd700; /* Gold text */
               font-family: "Arial", sans-serif;
+              line-height: 1.6; /* Improve readability */
             }
 
             /* Header Section */
@@ -769,12 +789,14 @@
               display: flex;
               justify-content: center;
               margin-bottom: 40px;
+              flex-wrap: wrap; /* Ensure navbar wraps on smaller screens */
             }
 
             .navbar ul {
               list-style: none;
               display: flex;
               gap: 30px;
+              flex-wrap: wrap; /* Wrap items for smaller screens */
             }
 
             .navbar li a {
@@ -861,45 +883,46 @@
             /* Responsive Design */
             @media (max-width: 768px) {
               .header-content {
-                flex-direction: column;
-                text-align: center;
+              flex-direction: column;
+              text-align: center;
               }
 
               .header-text {
-                text-align: center;
+              text-align: center;
               }
             }
 
-            /* ------------about--------------- */
-
+            /* About Section */
             #About {
               padding: 80px 0;
               color: #ababab;
               margin-left: 50px;
             }
+
             .About-col-2 h1 {
               color: white;
               font-size: 50px;
             }
+
             .About-col-2 p {
               margin-top: 20px;
             }
+
             .row {
               display: flex;
               justify-content: space-between;
               flex-wrap: wrap;
             }
-            /* img{
-    height: 320px;
-    width: 320px;
-} */
+
             .About-col-1 {
               flex-basis: 35%;
             }
+
             .About-col-1 img {
               width: 100%;
               border-radius: 15px;
             }
+
             .About-col-2 {
               flex-basis: 60%;
             }
@@ -948,12 +971,12 @@
             /* Responsive Adjustments */
             @media (max-width: 768px) {
               .tab-titles {
-                gap: 10px;
+              gap: 10px;
               }
 
               .tab-links {
-                font-size: 0.9rem;
-                padding: 8px 15px;
+              font-size: 0.9rem;
+              padding: 8px 15px;
               }
             }
 
@@ -1103,22 +1126,22 @@
             /* Responsive Design */
             @media (max-width: 768px) {
               .skills-grid {
-              grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-              gap: 20px; /* Adjust gap for smaller screens */
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 20px; /* Adjust gap for smaller screens */
               }
 
               .skill {
-              width: 120px;
-              height: 120px;
+                width: 120px;
+                height: 120px;
               }
 
               .skill i,
               .skill img {
-              font-size: 28px;
+                font-size: 28px;
               }
 
               .skill span {
-              font-size: 14px;
+                font-size: 14px;
               }
             }
 
