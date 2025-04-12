@@ -790,7 +790,7 @@
               justify-content: center;
               margin-bottom: 40px;
               flex-wrap: wrap; /* Ensure navbar wraps on smaller screens */
-              background: linear-gradient(90deg, #333, #444); /* Dark gradient background */
+              background-color: #000; /* Black background to match the project */
               padding: 15px 20px; /* Add padding for better spacing */
               border-radius: 10px; /* Rounded corners */
               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
@@ -808,7 +808,7 @@
             .navbar li a {
               text-decoration: none;
               font-size: 18px;
-              color: #fff; /* White text for contrast */
+              color: #ffd700; /* Gold text for better contrast */
               font-weight: bold;
               padding: 10px 20px; /* Add padding for clickable area */
               border-radius: 5px; /* Rounded corners for links */
@@ -830,11 +830,11 @@
             }
 
             .navbar li a:hover::before {
-              left: 0; /* Slide in effect */
+              left: 0; /* Slide-in effect */
             }
 
             .navbar li a:hover {
-              color: #ffcc00; /* Gold text on hover */
+              color: #fff; /* White text on hover */
               transform: scale(1.1); /* Slight zoom effect */
             }
 
@@ -953,8 +953,10 @@
             }
 
             .About-col-1 img {
-              width: 100%;
-              border-radius: 15px;
+              width: 100%; /* Ensures the image scales to fit the container */
+              max-width: 500px; /* Sets a maximum width for the image */
+              height: auto; /* Maintains the aspect ratio */
+              border-radius: 15px; /* Keeps the rounded corners */
             }
 
             .About-col-2 {
