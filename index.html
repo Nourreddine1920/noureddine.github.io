@@ -1044,8 +1044,8 @@
 
             .skills-grid {
               display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-              gap: 20px;
+              grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+              gap: 40px; /* Add space between skills */
               justify-items: center;
             }
 
@@ -1104,6 +1104,7 @@
             @media (max-width: 768px) {
               .skills-grid {
               grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+              gap: 20px; /* Adjust gap for smaller screens */
               }
 
               .skill {
