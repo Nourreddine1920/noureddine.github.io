@@ -549,21 +549,21 @@
             /* Project Section Styling */
             /* General Styling for Projects Section */
             #Projects {
-              padding: 50px 0;
+              padding: 60px 0;
               background-color: #000; /* Black background */
               color: #ffd700; /* Gold color for text */
             }
 
             .section-title {
-              font-size: 36px;
+              font-size: 40px;
               font-weight: bold;
               color: #ffd700; /* Gold color for the title */
               text-align: center;
-              margin-bottom: 50px;
+              margin-bottom: 60px;
               letter-spacing: 2px;
               text-transform: uppercase;
               animation: fadeIn 1s ease-in-out;
-              border-bottom: 2px solid #ffd700; /* Adds a subtle underline */
+              border-bottom: 3px solid #ffd700; /* Adds a subtle underline */
               display: inline-block;
               padding-bottom: 10px;
             }
@@ -571,46 +571,44 @@
             /* Project Cards Styling */
             .project-card {
               display: flex;
-              flex-direction: row;
-              justify-content: space-between;
+              flex-direction: column;
               background-color: #1a1a1a; /* Slightly lighter black for contrast */
-              border-radius: 12px;
+              border-radius: 15px;
               padding: 30px;
               margin: 20px 0;
-              box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-              transition: transform 0.3s ease-in-out,
-                box-shadow 0.3s ease-in-out;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+              transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
               position: relative;
               color: #ffd700; /* Gold text for cards */
             }
 
             .project-card:hover {
               transform: translateY(-10px);
-              box-shadow: 0 12px 24px rgba(255, 215, 0, 0.4); /* Adds a glow effect */
+              box-shadow: 0 12px 24px rgba(255, 215, 0, 0.5); /* Adds a glow effect */
             }
 
             .project-icon {
-              font-size: 50px;
+              font-size: 60px;
               color: #ffd700; /* Gold icons */
-              margin-right: 30px;
+              margin-bottom: 20px;
+              align-self: center;
               transition: transform 0.3s ease-in-out;
             }
 
             .project-content {
-              flex: 1;
-              padding-right: 30px;
+              text-align: center;
             }
 
             .project-content h3 {
-              font-size: 24px;
+              font-size: 26px;
               font-weight: bold;
               color: #ffd700; /* Gold for project titles */
-              margin-bottom: 10px;
+              margin-bottom: 15px;
               transition: color 0.3s ease-in-out;
             }
 
             .project-content h3:hover {
-              color: #e5c100; /* Title changes to white on hover */
+              color: #e5c100; /* Title changes to lighter gold on hover */
             }
 
             .project-date {
@@ -620,24 +618,16 @@
             }
 
             .project-description {
-              font-size: 0.95rem;
+              font-size: 1rem;
               line-height: 1.8; /* Improved readability */
               color: #ffffff; /* White text */
-              margin-bottom: 15px; /* More spacing */
-              padding-left: 20px; /* Space for bullet */
+              margin-bottom: 20px;
+              padding: 15px;
               position: relative;
-              border-left: 3px solid #ffd700; /* Golden left border */
+              border-left: 4px solid #ffd700; /* Golden left border */
               background: #333333; /* Dark gray background */
-              padding: 10px;
-              border-radius: 5px;
+              border-radius: 8px;
               transition: background 0.3s ease; /* Smooth hover effect */
-            }
-
-            .project-description::before {
-              color: #ffd700; /* Golden bullet */
-              position: absolute;
-              left: 0;
-              font-size: 1.2rem;
             }
 
             .project-description:hover {
@@ -647,35 +637,37 @@
             .technologies {
               font-size: 14px;
               color: #ffd700;
+              margin-top: 15px;
             }
 
             .technologies span {
               display: inline-block;
-              margin-right: 10px;
-              padding: 6px 12px;
+              margin: 5px;
+              padding: 8px 15px;
               background-color: #000; /* Black background for tags */
               border: 1px solid #ffd700; /* Gold border for tags */
               border-radius: 20px;
-              transition: background-color 0.3s ease-in-out,
-                color 0.3s ease-in-out;
+              transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
             }
 
             .project-card:hover .technologies span {
               background-color: #ffd700; /* Gold background on hover */
               color: #000; /* Black text on hover */
             }
+
             /* GitHub Link Styles */
             .github-link {
               display: inline-flex;
               align-items: center;
+              justify-content: center;
               text-decoration: none;
               color: #ffd700; /* Golden text */
               background-color: #333333; /* Dark gray background */
-              padding: 8px 15px;
-              border-radius: 5px;
+              padding: 10px 20px;
+              border-radius: 8px;
               border: 1px solid #ffd700; /* Golden border */
               transition: background-color 0.3s ease, color 0.3s ease;
-              margin-top: 15px;
+              margin-top: 20px;
             }
 
             .github-link i {
@@ -687,40 +679,38 @@
               background-color: #ffd700; /* Golden background on hover */
               color: #000000; /* Black text on hover */
             }
-            /* Media Query for Responsiveness */
+
+            /* Responsive Design */
             @media (max-width: 768px) {
               .project-card {
-              flex-direction: column;
-              align-items: flex-start;
-              padding: 20px; /* Adjust padding for smaller screens */
+              padding: 20px;
               }
 
               .project-icon {
-              margin-bottom: 20px;
-              font-size: 40px; /* Adjust icon size */
+              font-size: 50px;
               }
 
               .project-content h3 {
-              font-size: 20px; /* Adjust font size for smaller screens */
+              font-size: 22px;
               }
 
               .project-description {
               font-size: 14px;
-              line-height: 1.6; /* Improve readability */
               }
 
-              .technologies {
+              .technologies span {
+              padding: 6px 12px;
               font-size: 12px;
               }
             }
 
             @media (max-width: 480px) {
               .project-card {
-              padding: 15px; /* Further reduce padding for very small screens */
+              padding: 15px;
               }
 
               .project-content h3 {
-              font-size: 18px;
+              font-size: 20px;
               }
 
               .project-description {
@@ -728,7 +718,7 @@
               }
 
               .technologies span {
-              padding: 4px 8px; /* Adjust tag size */
+              padding: 4px 8px;
               font-size: 10px;
               }
             }
@@ -744,14 +734,6 @@
               transform: translateY(0);
               }
             }
-
-            /* Reset Styles */
-            * {
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-            }
-
             body {
               background-color: #000; /* Black background */
               color: #ffd700; /* Gold text */
