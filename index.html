@@ -1036,7 +1036,7 @@
 
             .skills-grid {
               display: grid;
-              grid-template-columns: 1fr; /* Force items to stack vertically */
+              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
               gap: 20px;
               justify-items: center;
             }
