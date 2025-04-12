@@ -770,6 +770,8 @@
               color: #ffd700; /* Gold text */
               font-family: "Arial", sans-serif;
               line-height: 1.6; /* Improve readability */
+              margin: 0; /* Remove default margin */
+              padding: 0; /* Remove default padding */
             }
 
             /* Header Section */
@@ -797,6 +799,8 @@
               display: flex;
               gap: 30px;
               flex-wrap: wrap; /* Wrap items for smaller screens */
+              padding: 0; /* Remove default padding */
+              margin: 0; /* Remove default margin */
             }
 
             .navbar li a {
@@ -814,9 +818,10 @@
             .header-content {
               display: flex;
               align-items: center;
-              justify-content: space-between;
+              justify-content: center; /* Center content horizontally */
               gap: 30px;
               flex-wrap: wrap; /* Wrap content for responsiveness */
+              text-align: center; /* Center text for smaller screens */
             }
 
             .image-container {
@@ -841,7 +846,7 @@
             /* Text Section */
             .header-text {
               flex: 2;
-              text-align: left;
+              text-align: center; /* Center text */
             }
 
             .header-text h1 {
@@ -896,7 +901,8 @@
             #About {
               padding: 80px 0;
               color: #ababab;
-              margin-left: 50px;
+              margin: 0 auto; /* Center the section */
+              max-width: 90%; /* Limit the width for smaller screens */
             }
 
             .About-col-2 h1 {
