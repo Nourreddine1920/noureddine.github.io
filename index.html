@@ -1152,6 +1152,85 @@
               margin: 0 auto;
               padding: 50px 0;
               position: relative;
+              border-left: 4px solid #ffd700; /* Gold vertical line */
+              padding-left: 20px; /* Space for the timeline */
+            }
+
+            .experience-timeline .timeline-item {
+              margin-bottom: 40px;
+              position: relative;
+            }
+
+            .experience-timeline .timeline-item::before {
+              content: "";
+              position: absolute;
+              left: -10px;
+              top: 0;
+              width: 20px;
+              height: 20px;
+              background-color: #ffd700; /* Gold circle */
+              border-radius: 50%;
+              box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Glow effect */
+            }
+
+            .experience-timeline .timeline-item .timeline-content {
+              background: #222; /* Dark gray for cards */
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+              padding: 20px 30px;
+              transition: transform 0.3s, box-shadow 0.3s;
+              color: #fff; /* White text for contrast */
+            }
+
+            .experience-timeline .timeline-item .timeline-content:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3); /* Enhanced glow on hover */
+            }
+
+            .experience-timeline .timeline-item .timeline-content h3 {
+              font-size: 22px;
+              color: #ffd700; /* Gold for job titles */
+              margin-bottom: 5px;
+            }
+
+            .experience-timeline .timeline-item .timeline-content h4 {
+              font-size: 18px;
+              color: #fff; /* White for company names */
+              margin-bottom: 5px;
+            }
+
+            .experience-timeline .timeline-item .timeline-content .date {
+              font-size: 14px;
+              color: #aaa; /* Light gray for dates */
+              margin-bottom: 15px;
+            }
+
+            .experience-timeline .timeline-item .timeline-content ul {
+              list-style-type: none;
+              padding-left: 0;
+              margin-bottom: 10px;
+            }
+
+            .experience-timeline .timeline-item .timeline-content ul li {
+              font-size: 16px;
+              color: #ddd; /* Slightly lighter gray for list items */
+              margin-bottom: 8px;
+            }
+
+            .experience-timeline .timeline-item .timeline-content .technologies {
+              font-size: 16px;
+              margin-top: 10px;
+              color: #fff; /* White for technologies label */
+            }
+
+            .experience-timeline .timeline-item .timeline-content .technologies span {
+              display: inline-block;
+              margin: 5px 5px 0 0;
+              background: #333; /* Darker gray for tech badges */
+              color: #ffd700; /* Gold text for badges */
+              padding: 5px 10px;
+              border-radius: 5px;
+              font-weight: bold;
             }
 
             .section-title {
@@ -1160,19 +1239,6 @@
               margin-bottom: 40px;
               color: #ffd700; /* Gold for the section title */
               font-weight: bold;
-              text-transform: uppercase;
-              letter-spacing: 2px;
-              position: relative;
-            }
-
-            .section-title::after {
-              content: "";
-              display: block;
-              width: 80px;
-              height: 4px;
-              background: #ffd700; /* Gold underline */
-              margin: 10px auto 0;
-              border-radius: 2px;
             }
 
             .about-me {
@@ -1182,7 +1248,6 @@
               color: #ffd700; /* Gold for the section title */
               font-weight: bold;
             }
-
             .timeline-item {
               display: flex;
               align-items: flex-start;
@@ -1195,71 +1260,49 @@
               position: absolute;
               left: 0;
               top: 0;
-              width: 50px;
-              height: 50px;
+              width: 40px;
+              height: 40px;
               background-color: #ffd700; /* Gold icon */
               color: #000; /* Black for contrast */
               display: flex;
               justify-content: center;
               align-items: center;
               border-radius: 50%;
-              font-size: 24px;
-              box-shadow: 0 6px 10px rgba(255, 215, 0, 0.4); /* Enhanced glow */
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-
-            .timeline-icon:hover {
-              transform: scale(1.1);
-              box-shadow: 0 8px 15px rgba(255, 215, 0, 0.6); /* Stronger glow */
+              font-size: 20px;
+              box-shadow: 0 4px 6px rgba(255, 215, 0, 0.3); /* Subtle glow */
             }
 
             .timeline-content {
               background: #222; /* Dark gray for cards */
-              border-radius: 12px;
-              box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
-              padding: 25px 35px;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+              padding: 20px 30px;
               width: 100%;
               transition: transform 0.3s, box-shadow 0.3s;
               color: #fff; /* White text for contrast */
-              position: relative;
-              overflow: hidden;
             }
 
             .timeline-content:hover {
               transform: translateY(-5px);
-              box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Enhanced glow on hover */
-            }
-
-            .timeline-content::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 5px;
-              height: 100%;
-              background: #ffd700; /* Gold accent bar */
-              border-radius: 5px;
+              box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3); /* Enhanced glow on hover */
             }
 
             .timeline-content h3 {
-              font-size: 24px;
+              font-size: 22px;
               color: #ffd700; /* Gold for job titles */
-              margin-bottom: 10px;
-              font-weight: bold;
+              margin-bottom: 5px;
             }
 
             .timeline-content h4 {
-              font-size: 20px;
+              font-size: 18px;
               color: #fff; /* White for company names */
-              margin-bottom: 10px;
-              font-style: italic;
+              margin-bottom: 5px;
             }
 
             .timeline-content .date {
               font-size: 14px;
               color: #aaa; /* Light gray for dates */
               margin-bottom: 15px;
-              font-weight: bold;
             }
 
             .timeline-content ul {
@@ -1272,16 +1315,6 @@
               font-size: 16px;
               color: #ddd; /* Slightly lighter gray for list items */
               margin-bottom: 8px;
-              position: relative;
-              padding-left: 20px;
-            }
-
-            .timeline-content ul li::before {
-              content: "•";
-              position: absolute;
-              left: 0;
-              color: #ffd700; /* Gold bullet points */
-              font-size: 18px;
             }
 
             .timeline-content .technologies {
@@ -1295,47 +1328,156 @@
               margin: 5px 5px 0 0;
               background: #333; /* Darker gray for tech badges */
               color: #ffd700; /* Gold text for badges */
-              padding: 6px 12px;
-              border-radius: 8px;
+              padding: 5px 10px;
+              border-radius: 5px;
               font-weight: bold;
-              transition: background 0.3s ease, color 0.3s ease;
-            }
-
-            .timeline-content .technologies span:hover {
-              background: #ffd700; /* Gold background on hover */
-              color: #000; /* Black text on hover */
             }
 
             /* Responsive Design */
             @media (max-width: 768px) {
               .timeline-item {
-              flex-direction: column;
-              padding-left: 0;
+                flex-direction: column;
+                padding-left: 0;
               }
 
               .timeline-icon {
-              left: 50%;
-              transform: translateX(-50%);
+                left: 50%;
+                transform: translateX(-50%);
               }
 
               .timeline-content {
-              margin-top: 20px;
+                margin-top: 20px;
               }
             }
 
             /* Media Queries */
+            @media (max-width: 768px) {
+              .nav ul {
+                flex-direction: column;
+              }
+
+              .header-text h1 {
+                font-size: 1.5em; /* Adjust font size for smaller screens */
+              }
+
+              .skills-grid {
+                grid-template-columns: 1fr; /* Stack skills on small screens */
+            }
+
             @media (max-width: 480px) {
-              .timeline-content h3 {
-              font-size: 20px;
+              .profile-image {
+                width: 120px; /* Smaller image on very small screens */
               }
 
-              .timeline-content h4 {
-              font-size: 16px;
+              h1,
+              h2 {
+                font-size: 1.2em; /* Smaller headings */
               }
+            }
 
-              .timeline-content ul li {
-              font-size: 14px;
-              }
+            /* Education Section - With Background Images & Animations */
+            .experience-section {
+              padding: 3rem;
+              border-radius: 12px;
+              box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+              margin-top: 2rem;
+              color: #f5f5f5;
+            }
+
+            .section-title {
+              font-size: 2.5rem;
+              text-align: center;
+              margin-bottom: 2rem;
+              color: #ffd700;
+              text-transform: uppercase;
+              font-weight: bold;
+            }
+
+            /* Cards Container */
+            .cards-container {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 2rem;
+            }
+
+            /* Card Styling */
+            .experience-card {
+              background-color: rgba(41, 41, 41, 0.95);
+              border: 2px solid #ffd700;
+              border-radius: 12px;
+              padding: 1.5rem;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              position: relative;
+              overflow: hidden;
+              z-index: 1;
+            }
+
+            /* Hover Effects */
+            .experience-card:hover {
+              transform: translateY(-10px);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+            }
+
+            /* Background Overlay */
+            .background-overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: url("assests/education.jpg") center/cover no-repeat;
+              opacity: 0.15;
+              z-index: -1;
+              border-radius: 12px;
+              filter: grayscale(100%);
+            }
+
+            /* Card Header */
+            .card-header h3 {
+              font-size: 1.5rem;
+              color: #f5f5f5;
+              margin-bottom: 0.5rem;
+            }
+
+            .card-header .date {
+              font-size: 1rem;
+              color: #ff6f61;
+              font-weight: bold;
+            }
+
+            /* Card Description */
+            .card-description {
+              font-size: 1rem;
+              line-height: 1.6;
+              margin: 1rem 0;
+              color: #d9d9d9;
+            }
+
+            /* Card Footer */
+            .card-footer .location {
+              font-size: 0.9rem;
+              color: #a6a6a6;
+              font-style: italic;
+            }
+
+            /* Animations - AOS */
+            [data-aos] {
+              opacity: 0;
+              transform: translateY(20px);
+              transition-property: opacity, transform;
+              transition-duration: 0.6s;
+              transition-timing-function: ease-out;
+            }
+
+            [data-aos].aos-animate {
+              opacity: 1;
+              transform: translateY(0);
+            }
+
+            /* Hover Animation */
+            .experience-card:hover .background-overlay {
+              opacity: 0.3;
+              filter: grayscale(0%);
             }
           </style>
 
