@@ -1638,6 +1638,13 @@
               flex-direction: column; /* Stack spans vertically */
               gap: 10px; /* Add spacing between spans */
               align-items: flex-start; /* Align spans to the left */
+              width: 100%; /* Ensure all spans have the same width */
+            }
+
+            .experience-list span {
+              display: inline-block; /* Ensure spans behave like block elements */
+              width: 100%; /* Make all spans the same width */
+              box-sizing: border-box; /* Include padding and border in width */
             }
 
             /* Hover Effects */
