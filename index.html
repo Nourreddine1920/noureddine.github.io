@@ -1393,8 +1393,8 @@
 
           .timeline-content .date {
             font-size: 14px;
-            color: #aaa;
-            /* Light gray for dates */
+            color: #ff6f61;
+            /* Lighter gold for dates */
             margin-bottom: 15px;
           }
 
@@ -1515,12 +1515,14 @@
           }
 
           .experience-text {
+            display: inline-block; /* Ensures spans are treated as block-like elements */
             font-size: 0.95rem;
             line-height: 1.8;
             /* Improved readability */
             color: #ffffff;
             /* White text */
-            margin-bottom: 15px;
+            margin-bottom: 15px; /* Adds vertical spacing between spans */
+            margin-right: 10px; /* Adds horizontal spacing between spans */
             /* More spacing */
             padding-left: 20px;
             /* Space for bullet */
