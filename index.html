@@ -1764,12 +1764,104 @@
                       <span class="icon-paper-plane" id="icon"></span>
                     </div>
                     <h3 class="mb-4">Email Address</h3>
-                    <p>
-                      <a href="mailto:noureddine.awledbrahim@gmail.com"
-                        >noureddine.awled-<br />
-                        brahim@gmail.com</a
+                    <form
+                      action="mailto:noureddine.awledbrahim@gmail.com"
+                      method="post"
+                      enctype="text/plain"
+                      style="
+                      background-color: #222;
+                      padding: 20px;
+                      border-radius: 10px;
+                      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+                      color: #ffd700;
+                      font-family: Arial, sans-serif;
+                      "
+                    >
+                      <label
+                      for="name"
+                      style="display: block; margin-bottom: 10px; font-weight: bold;"
+                      >Name:</label
                       >
-                    </p>
+                      <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 20px;
+                        border: 1px solid #ffd700;
+                        border-radius: 5px;
+                        background-color: #333;
+                        color: #ffd700;
+                      "
+                      />
+
+                      <label
+                      for="email"
+                      style="display: block; margin-bottom: 10px; font-weight: bold;"
+                      >Email:</label
+                      >
+                      <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 20px;
+                        border: 1px solid #ffd700;
+                        border-radius: 5px;
+                        background-color: #333;
+                        color: #ffd700;
+                      "
+                      />
+
+                      <label
+                      for="message"
+                      style="display: block; margin-bottom: 10px; font-weight: bold;"
+                      >Message:</label
+                      >
+                      <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      placeholder="Your Message"
+                      required
+                      style="
+                        width: 100%;
+                        padding: 10px;
+                        margin-bottom: 20px;
+                        border: 1px solid #ffd700;
+                        border-radius: 5px;
+                        background-color: #333;
+                        color: #ffd700;
+                      "
+                      ></textarea>
+
+                      <button
+                      type="submit"
+                      class="btn"
+                      style="
+                        padding: 10px 20px;
+                        background-color: #ffd700;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        color: #000;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        transition: background-color 0.3s ease, transform 0.3s ease;
+                      "
+                      >
+                      Send Email
+                      </button>
+                    </form>
                   </div>
                 </div>
                 <!-- Resume Link -->
